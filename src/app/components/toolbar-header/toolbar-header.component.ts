@@ -7,8 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ToolbarHeaderComponent implements OnInit {
 
-  @Input() welcome: string = 'Welcome';
-  @Input() goodbye: string = 'Goodbye';
+  @Input() welcome: string = '';
+  @Input() goodbye: string = '';
 
   constructor() { }
 
