@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'md-landing-app';
+
+  public title = 'md-landing-app';
+  public selection: string = '';
+
+  public handleTerminalButtonClick(event: string): void {
+    this.selection = event;
+  }
 }
