@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'md-toolbar-header',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./toolbar-header.component.scss']
 })
 export class ToolbarHeaderComponent implements OnInit {
+
+  @Input() welcome: string = 'Welcome';
+  @Input() goodbye: string = 'Goodbye';
 
   constructor() { }
 
