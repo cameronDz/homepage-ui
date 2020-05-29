@@ -6,6 +6,7 @@ import { CloudFooterComponent } from './components/cloud-footer/cloud-footer.com
 import { ToolbarHeaderComponent } from './components/toolbar-header/toolbar-header.component';
 import { CircleCardLinkComponent } from './components/circle-card-link/circle-card-link.component';
 import { LinkedFooterComponent } from './components/linked-footer/linked-footer.component';
+import { ResourceCardsComponent } from './components/resource-cards/resource-cards.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { LinkedFooterComponent } from './components/linked-footer/linked-footer.
     CloudFooterComponent,
     ToolbarHeaderComponent,
     CircleCardLinkComponent,
-    LinkedFooterComponent
+    LinkedFooterComponent,
+    ResourceCardsComponent
   ],
   imports: [
     BrowserModule
