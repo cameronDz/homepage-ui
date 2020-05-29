@@ -7,7 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  public title = 'md-landing-app';
+  public title: string = 'Cam Dziurgot';
+  public subtitle: string = 'Software Engineer and DevOps enthusiast. Interests include; America, suits, coffee, and dogs.';
+
+  // terminal selection item
   public selection: string = '';
 
   public handleTerminalButtonClick(event: string): void {

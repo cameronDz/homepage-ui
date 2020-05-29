@@ -1,13 +1,10 @@
-import { TestBed, async } from '@angular/core/testing';
+import { async, TestBed, TestModuleMetadata } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
+  const config: TestModuleMetadata = { declarations: [AppComponent] };
   beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [
-        AppComponent
-      ],
-    }).compileComponents();
+    TestBed.configureTestingModule(config).compileComponents();
   }));
 
   it('should create the app', () => {
@@ -26,6 +23,7 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('md-landing-app app is running!');
+    const expectd: string = fixture.componentRef.instance.title;
+    expect(compiled.querySelector('.content h1').textContent).toContain(expectd);
   });
 });

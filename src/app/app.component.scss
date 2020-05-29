@@ -6,6 +6,22 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.card.jumbotron {
+  background-color: #eee;
+  color: rgb(85, 85, 85);
+  display: block;
+  height: auto;
+  text-align: center;
+  h1 {
+    font-size: 60px;
+    line-height: 48px;
+    padding-bottom: 16px;
+  }
+  h3 {
+    font-weight: 500;
+    margin-top: 16px;
+  }
+}
 
 .terminal {
   position: relative;
