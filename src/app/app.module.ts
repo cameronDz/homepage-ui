@@ -8,6 +8,7 @@ import { CircleCardLinkComponent } from './components/circle-card-link/circle-ca
 import { LinkedFooterComponent } from './components/linked-footer/linked-footer.component';
 import { ResourceCardsComponent } from './components/resource-cards/resource-cards.component';
 import { TerminalCardsComponent } from './components/terminal-cards/terminal-cards.component';
+import { RightArrowSvgComponent } from './components/resource-cards/right-arrow-svg/right-arrow-svg.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { TerminalCardsComponent } from './components/terminal-cards/terminal-car
     CircleCardLinkComponent,
     LinkedFooterComponent,
     ResourceCardsComponent,
-    TerminalCardsComponent
+    TerminalCardsComponent,
+    RightArrowSvgComponent
   ],
   imports: [
     BrowserModule

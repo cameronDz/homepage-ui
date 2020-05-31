@@ -6,12 +6,12 @@
         <h3>{{ subtitle }}</h3>
     </div>
 
-    <h2>Resources</h2>
-    <p>Here are some links to help you get started:</p>
+    <h2>{{resourceTitle}}</h2>
+    <p>{{resourceSubtitle}}</p>
     <md-resource-cards></md-resource-cards>
 
-    <h2>Next Steps</h2>
-    <p>What do you want to do next with your app?</p>
+    <h2>{{nextStepsTitle}}</h2>
+    <p>{{nextStepsSubtitle}}</p>
     <md-terminal-cards (outputTerminalButtonClick)="handleTerminalButtonClick($event)"></md-terminal-cards>
 
     <div class="terminal" [ngSwitch]="selection">
