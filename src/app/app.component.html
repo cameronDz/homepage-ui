@@ -6,22 +6,26 @@
         <h3>{{ subtitle }}</h3>
     </div>
 
-    <h2>{{ resourceTitle }}</h2>
-    <p>{{ resourceSubtitle }}</p>
-    <md-resource-cards></md-resource-cards>
+    <ng-container *ngIf="showResources">
+        <h2>{{ resourceTitle }}</h2>
+        <p>{{ resourceSubtitle }}</p>
+        <md-resource-cards></md-resource-cards>
+    </ng-container>
 
-    <h2>{{ nextStepsTitle }}</h2>
-    <p>{{ nextStepsSubtitle }}</p>
-    <md-terminal-cards (outputTerminalButtonClick)="handleTerminalButtonClick($event)"></md-terminal-cards>
+    <ng-container *ngIf="showNextSteps">
+        <h2>{{ nextStepsTitle }}</h2>
+        <p>{{ nextStepsSubtitle }}</p>
+        <md-terminal-cards (outputTerminalButtonClick)="handleTerminalButtonClick($event)"></md-terminal-cards>
 
-    <div class="terminal" [ngSwitch]="selection">
-        <pre *ngSwitchDefault>ng generate component xyz</pre>
-        <pre *ngSwitchCase="'material'">ng add @angular/material</pre>
-        <pre *ngSwitchCase="'pwa'">ng add @angular/pwa</pre>
-        <pre *ngSwitchCase="'dependency'">ng add _____</pre>
-        <pre *ngSwitchCase="'test'">ng test</pre>
-        <pre *ngSwitchCase="'build'">ng build --prod</pre>
-    </div>
+        <div class="terminal" [ngSwitch]="selection">
+            <pre *ngSwitchDefault>ng generate component xyz</pre>
+            <pre *ngSwitchCase="'material'">ng add @angular/material</pre>
+            <pre *ngSwitchCase="'pwa'">ng add @angular/pwa</pre>
+            <pre *ngSwitchCase="'dependency'">ng add _____</pre>
+            <pre *ngSwitchCase="'test'">ng test</pre>
+            <pre *ngSwitchCase="'build'">ng build --prod</pre>
+        </div>
+    </ng-container>
 
     <md-circle-card-link></md-circle-card-link>
     <md-linked-footer></md-linked-footer>
