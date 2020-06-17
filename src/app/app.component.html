@@ -6,6 +6,9 @@
         <h3>{{ subtitle }}</h3>
     </div>
 
+    <ng-container *ngIf="showBullets">
+    </ng-container>
+
     <ng-container *ngIf="showResources">
         <h2>{{ resourceTitle }}</h2>
         <p>{{ resourceSubtitle }}</p>

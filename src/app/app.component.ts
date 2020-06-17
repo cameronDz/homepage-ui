@@ -10,6 +10,7 @@ export class AppComponent {
   public title: string = 'Cam Dziurgot';
   public subtitle: string = 'Software Engineer and DevOps enthusiast. Interests include; America, suits, coffee, and dogs.';
 
+  public showBullets: boolean = true;
   public showResources: boolean = true;
   public resourceTitle: string = 'Projects';
   public resourceSubtitle: string = 'Here are some projects I\'ve worked on and deployed:';
