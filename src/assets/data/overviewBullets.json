@@ -1,0 +1,20 @@
+{
+  "payload": {
+    "bullets": [
+      {
+        "iconHref": "https://camerondz.github.io/about.html",
+        "iconHrefTargetBlank": false,
+        "iconSrc": "assets/images/resume.png",
+        "iconTitle": "About Page",
+        "message": "Work experience and Education listed on the About page."
+      },
+      {
+        "iconHref": "https://github.com/cameronDz",
+        "iconHrefTargetBlank": true,
+        "iconSrc": "assets/images/github.png",
+        "iconTitle": "GitHub Homepage",
+        "message": "Various projects in multiple languages and technologies located on GitHub."
+      }
+    ]
+  }
+}

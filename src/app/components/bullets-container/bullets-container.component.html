@@ -1,0 +1,11 @@
+<div *ngIf="hasContent">
+    <ng-container *ngFor="let point of points">
+        <md-bullet-point *ngIf="point"
+            [iconHref]="point.iconHref"
+            [iconHrefTargetBlank]="point.iconHrefTargetBlank"
+            [iconSrc]="point.iconSrc"
+            [iconTitle]="point.iconTitle"
+            [message]="point.message">
+        </md-bullet-point>
+    </ng-container>
+</div>
