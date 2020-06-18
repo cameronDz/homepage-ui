@@ -10,7 +10,7 @@
         <md-bullets-container [points]="overviewBullets"></md-bullets-container>
     </ng-container>
 
-    <ng-container *ngIf="showResources">
+    <!-- <ng-container *ngIf="showResources">
         <h2>{{ resourceTitle }}</h2>
         <p>{{ resourceSubtitle }}</p>
         <md-resource-cards></md-resource-cards>
@@ -29,9 +29,10 @@
             <pre *ngSwitchCase="'test'">ng test</pre>
             <pre *ngSwitchCase="'build'">ng build --prod</pre>
         </div>
-    </ng-container>
+    </ng-container> -->
 
-    <md-circle-card-link></md-circle-card-link>
+    <md-application-overview-container></md-application-overview-container>
+    <!-- <md-circle-card-link></md-circle-card-link> -->
     <md-linked-footer></md-linked-footer>
     <md-cloud-footer></md-cloud-footer>
 </div>
