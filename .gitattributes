@@ -7,3 +7,7 @@ browerslist text eol=lf
 *.md text eol=lf
 *.scss text eol=lf
 *.ts text eol=lf
+
+# Denote all files that are truly binary and should not be modified.
+*.ico binary
+*.png binary
