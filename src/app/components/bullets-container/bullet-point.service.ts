@@ -10,7 +10,7 @@ export class BulletPointService {
   constructor() {}
 
   public getOverviewBulletPoints(): Array<BulletPointModel> {
-    let array: Array<any> = [];
+    let array: Array<BulletPointModel> = [];
     if (this.isValidPayload(_overviewBullets)) {
       array = _overviewBullets.payload.bullets;
     }
@@ -18,7 +18,7 @@ export class BulletPointService {
   }
 
   public getAugmentedApplicationBulletPoints(): Array<BulletPointModel> {
-    let array: Array<any> = [];
+    let array: Array<BulletPointModel> = [];
     if (this.isValidPayload(_augmentedApplicationBullets)) {
       array = _augmentedApplicationBullets.payload.bullets;
     }
@@ -26,7 +26,7 @@ export class BulletPointService {
   }
 
   public getLogNotesApplicationBulletPoints(): Array<BulletPointModel> {
-    let array: Array<any> = [];
+    let array: Array<BulletPointModel> = [];
     if (this.isValidPayload(_logNotesApplicationBullets)) {
       array = _logNotesApplicationBullets.payload.bullets;
     }
@@ -34,6 +34,6 @@ export class BulletPointService {
   }
 
   private isValidPayload(root: any): boolean {
-    return root && root.payload && Array.isArray(root.payload.bullets);
+    return root && root.default && root.default.payload && Array.isArray(root.default.payload.bullets);
   }
 }
