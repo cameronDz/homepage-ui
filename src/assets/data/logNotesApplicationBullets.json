@@ -1,0 +1,34 @@
+{
+  "payload": {
+    "bullets": [
+      {
+        "iconHref": "https://github.com/cameronDz/s3-access-api",
+        "iconHrefTargetBlank": true,
+        "iconSrc": "assets/images/spring-boot.png",
+        "iconTitle": "Spring Boot",
+        "message": "View repository for backend/middleware Spring Boot project on GitHub."
+      },
+      {
+        "iconHref": "https://log-notes-assets-api.herokuapp.com/swagger-ui.html#/s-3-index-controller",
+        "iconHrefTargetBlank": true,
+        "iconSrc": "assets/images/heroku.png",
+        "iconTitle": "Heroku",
+        "message": "View deployed API application Swagger documentation on Heruko cloud."
+      },
+      {
+        "iconHref": "https://github.com/cameronDz/notes",
+        "iconHrefTargetBlank": true,
+        "iconSrc": "assets/images/react.png",
+        "iconTitle": "ReactJS",
+        "message": "View repository for frontend React UI project on GitHub."
+      },
+      {
+        "iconHref": "http://log-notes-app.s3-website-us-east-1.amazonaws.com/",
+        "iconHrefTargetBlank": true,
+        "iconSrc": "assets/images/aws-s3.png",
+        "iconTitle": "AWS S3",
+        "message": "Visit S3 bucket directly used to statically host webpage."
+      }
+    ]
+  }
+}
