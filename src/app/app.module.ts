@@ -12,6 +12,7 @@ import { RightArrowSvgComponent } from './components/resource-cards/right-arrow-
 import { BulletsContainerComponent } from './components/bullets-container/bullets-container.component';
 import { BulletPointComponent } from './components/bullets-container/bullet-point/bullet-point.component';
 import { ApplicationOverviewComponent } from './components/application-overview/application-overview.component';
+import { ApplicationOverviewContainerComponent } from './components/application-overview-container/application-overview-container.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ApplicationOverviewComponent } from './components/application-overview/
     RightArrowSvgComponent,
     BulletsContainerComponent,
     BulletPointComponent,
-    ApplicationOverviewComponent
+    ApplicationOverviewComponent,
+    ApplicationOverviewContainerComponent
   ],
   imports: [
     BrowserModule
