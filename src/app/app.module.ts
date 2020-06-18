@@ -11,6 +11,7 @@ import { TerminalCardsComponent } from './components/terminal-cards/terminal-car
 import { RightArrowSvgComponent } from './components/resource-cards/right-arrow-svg/right-arrow-svg.component';
 import { BulletsContainerComponent } from './components/bullets-container/bullets-container.component';
 import { BulletPointComponent } from './components/bullets-container/bullet-point/bullet-point.component';
+import { ApplicationOverviewComponent } from './components/application-overview/application-overview.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { BulletPointComponent } from './components/bullets-container/bullet-poin
     TerminalCardsComponent,
     RightArrowSvgComponent,
     BulletsContainerComponent,
-    BulletPointComponent
+    BulletPointComponent,
+    ApplicationOverviewComponent
   ],
   imports: [
     BrowserModule
