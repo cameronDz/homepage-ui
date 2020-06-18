@@ -13,6 +13,7 @@ export class BulletPointComponent implements OnChanges, OnInit {
 
   private readonly SELF_TARGET: string = '_self';
   private readonly BLANK_TARGET: string = '_blank';
+
   @Input() iconHref: string = '';
   @Input() iconHrefTargetBlank: boolean = false;
   @Input() iconSrc: string = '';
@@ -30,5 +31,4 @@ export class BulletPointComponent implements OnChanges, OnInit {
       this.target = this.iconHrefTargetBlank ? this.BLANK_TARGET : this.SELF_TARGET;
     }
   }
-
 }

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { BulletPointModel } from '../bullets-container/bullet-point.model';
 
 @Component({
   selector: 'md-application-overview',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ApplicationOverviewComponent implements OnInit {
 
-  constructor() { }
+  public readonly TECHNOLOGY_TITLE: string = 'Technologies';
 
-  ngOnInit(): void {
-  }
+  @Input() overviewParagraphs: Array<string> = [];
+  @Input() technologyBullets: Array<BulletPointModel> = [];
+  @Input() technologyParagraphs: Array<string> = [];
+  @Input() title: string = '';
+
+  constructor() {}
+
+  ngOnInit(): void {}
 
 }
