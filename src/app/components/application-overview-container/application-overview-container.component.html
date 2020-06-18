@@ -1,1 +1,7 @@
-<p>application-overview-container works!</p>
+<md-application-overview *ngIf="overviewModel"
+    [overviewParagraphs]="overviewModel.overviewParagraphs"
+    [technologyParagraphs]="overviewModel.technologyParagraphs"
+    [title]="overviewModel.title"
+    [technologyBullets]="technologyBullets"
+>
+</md-application-overview>
