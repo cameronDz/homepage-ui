@@ -3,7 +3,7 @@ import { ApplicationOverviewModel } from './application-overview.model';
 import * as _applicationOverviews from '../../../assets/data/applicationOverviews.json';
 
 enum ApplicationName {
-  AUGMENTED = 'augments',
+  AUGMENTED = 'augmented',
   LOG_NOTES = 'logNotes'
 }
 
@@ -31,6 +31,6 @@ export class ApplicationOverviewService {
   }
 
   private hasApplicationModel(root: any, applicationName: ApplicationName): boolean {
-    return root && root.payload && root.payload[applicationName];
+    return root && root.default && root.default.payload && root.default.payload[applicationName];
   }
 }
