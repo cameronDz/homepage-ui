@@ -1,25 +1,25 @@
 {
   "payload": {
     "augmented": {
+      "deployedUrl": "http://www.augmented.fit",
       "overviewParagraphs": [
-        "Augmented is a personal fitness application used to track fitness and nutrition. The end goal for augmented is to have user base (other than myself) use the application to record exercises routines, sleep schedules, meals, etc., connect wearable and smart devices to the application, and access other fitness and diet tracking applications, to have one place to collect all self tracking data. Currently, the application is only used to track cardio workouts. Visit the deployed application here; <a href=\"http://www.augmented.fit\" target=\"_blank\">http://www.augmented.fit</a>."
+        "Augmented is a personal fitness application used to track fitness and nutrition. The end goal for augmented is to have user base (other than myself) use the application to record exercises routines, sleep schedules, meals, etc., connect wearable and smart devices to the application, and access other fitness and diet tracking applications, to have one place to collect all self tracking data. Currently, the application is only used to track cardio workouts."
       ],
       "technologyParagraphs": [
         "The front end of the application is a SPA using ReactJS, with a combination of Bulma and Material UI styling frameworks. Keeps code quality standards using ES Lint, compiled using Webpack, and tested using Mocha framework. The UI is deployed to an AWS S3 bucket, which statically hosts the applcation. GoDaddy is used to forward mask any user that navigates to the S3 bucket address.",
-        "The back end of the applcation is written in .NET framework, using C# to write the API to perform basic CRUD functions against a database generated using Entity Framework. The API and the database are deployed manually on Azure using Visual Studio.",
-        "List of related pages associate with Augmented application:"
+        "The back end of the applcation is written in .NET framework, using C# to write the API to perform basic CRUD functions against a database generated using Entity Framework. The API and the database are deployed manually on Azure using Visual Studio."
       ],
       "title": "Augmented"
     },
     "logNotes": {
+      "deployedUrl": "http://log-notes-app.s3-website-us-east-1.amazonaws.com/",
       "overviewParagraphs": [
-        "The Log Notes application is an application meant for creating, accessing, and organizing various logs and notes of a user. The primary purpose of the deployed application now is to create notes from Medium.com articles to use for references in future articles and white papers on technology. Eventually, the application will evolve to support multiple types of notes by using multiple types of forms. Visit the deployed application, <a href=\"http://log-notes-app.s3-website-us-east-1.amazonaws.com/\" target=\"_blank\">here</a>."
+        "The Log Notes application is an application meant for creating, accessing, and organizing various logs and notes of a user. The primary purpose of the deployed application now is to create notes from Medium.com articles to use for references in future articles and white papers on technology. Eventually, the application will evolve to support multiple types of notes by using multiple types of forms."
       ],
       "technologyParagraphs": [
         "The frontend is a ReactJS SPA that uses Material UI for styling, ES Lint with Mocha for code quality and unit testing, and Webpack for bundling the application. It has a manual deploy to a statically hosted AWS S3 bucket using a combination of an NPM script in the project and AWS CLI.",
         "The backend of the application is made using a Java Spring Boot framework built with Apache Maven. The API is used to perform basic CRUD functionality with JSON objects in an S3 bucket (seperate from the statically hosted bucket), that requires authentication for any functionality besides retrieval.",
-        "The API is deployed to a Heroku cloud server in a fully automated pipeline that runs anytime the a commit is made to the master branch of the applications GitHub repository.",
-        "List of related pages associate with Log Notes application:"
+        "The API is deployed to a Heroku cloud server in a fully automated pipeline that runs anytime the a commit is made to the master branch of the applications GitHub repository."
       ],
       "title": "Log Notes"
     }

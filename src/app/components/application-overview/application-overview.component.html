@@ -7,6 +7,10 @@
                 {{paragraph}}
             </p>
         </ng-container>
+        <p *ngIf="deployedUrl">
+            {{VISIT_DEPLOYED_APPLICATION_TEXT + " "}}
+            <a href="{{deployedUrl}}" target="_blank">{{deployedUrl}}</a>.
+        </p>
     </div>
 
     <div *ngIf="technologyParagraphs && !!technologyParagraphs.length" class="technology-section-container">
@@ -19,6 +23,9 @@
         </ng-container>
 
         <div *ngIf="technologyBullets && !!technologyBullets.length" class="technology-bullets-container">
+            <p class="paragraph-container">
+                {{TECHNOLOGY_LIST_TEXT}}
+            </p>
             <ng-container *ngFor="let bullet of technologyBullets">
                 <div *ngIf="bullet" class="bullet-point-container">
                     <md-bullet-point

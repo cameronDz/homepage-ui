@@ -19,8 +19,8 @@
         "iconHref": "https://github.com/cameronDz/augmented-aspnet-backend",
         "iconHrefTargetBlank": true,
         "iconSrc": "assets/images/dot-net.png",
-        "iconTitle": "View repository for backend .NET project on GitHub.",
-        "message": "ASP.NET"
+        "iconTitle": "ASP.NET",
+        "message": "View repository for backend .NET project on GitHub."
       },
       {
         "iconHref": "https://augmentedaspnetbackend.azurewebsites.net/",
