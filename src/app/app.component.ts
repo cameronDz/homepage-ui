@@ -12,27 +12,13 @@ export class AppComponent implements OnInit {
   public title: string = 'Cam Dziurgot';
   public subtitle: string = 'Software Engineer and DevOps enthusiast. Interests include; America, suits, coffee, and dogs.';
 
-  public showBullets: boolean = true;
-  public showResources: boolean = true;
-  public resourceTitle: string = 'Projects';
-  public resourceSubtitle: string = 'Here are some projects I\'ve worked on and deployed:';
-
-  public showNextSteps: boolean = false;
-  public nextStepsTitle: string = 'Next Steps';
-  public nextStepsSubtitle: string = 'What do you want to do next with your app?';
-
+  public showBullets: boolean = false;
   public overviewBullets: Array<BulletPointModel> = [];
-
-  // terminal selection item
-  public selection: string = '';
 
   constructor(private bulletPointService: BulletPointService) {}
 
   ngOnInit(): void {
     this.overviewBullets = this.bulletPointService.getOverviewBulletPoints();
-  }
-
-  public handleTerminalButtonClick(event: string): void {
-    this.selection = event;
+    this.showBullets = this.overviewBullets && !!this.overviewBullets.length;
   }
 }
