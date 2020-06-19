@@ -1,5 +1,5 @@
 <div class="application-overview-container">
-    <h2 *ngIf="title">{{title}}</h2>
+    <h2 *ngIf="title" class="application-title">{{title}}</h2>
 
     <div *ngIf="overviewParagraphs" class="overview-paragraphs-container">
         <ng-container *ngFor="let paragraph of overviewParagraphs">

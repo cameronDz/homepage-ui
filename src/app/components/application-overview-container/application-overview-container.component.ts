@@ -11,15 +11,19 @@ import { BulletPointModel } from '../bullets-container/bullet-point.model';
 })
 export class ApplicationOverviewContainerComponent implements OnInit {
 
-  public overviewModel: ApplicationOverviewModel;
-  public technologyBullets: Array<BulletPointModel>;
+  public augmentedOverviewModel: ApplicationOverviewModel;
+  public augmentedTechnologyBullets: Array<BulletPointModel>;
+
+  public logNotesOverviewModel: ApplicationOverviewModel;
+  public logNotesTechnologyBullets: Array<BulletPointModel>;
 
   constructor(private applicationOverviewService: ApplicationOverviewService, private bulletPointService: BulletPointService) {}
 
   ngOnInit(): void {
-    this.overviewModel = this.applicationOverviewService.getAugmentedApplicationInformation();
-    this.technologyBullets = this.bulletPointService.getAugmentedApplicationBulletPoints();
-    console.log('this.overviewModel', this.overviewModel);
-  }
+    this.augmentedOverviewModel = this.applicationOverviewService.getAugmentedApplicationInformation();
+    this.augmentedTechnologyBullets = this.bulletPointService.getAugmentedApplicationBulletPoints();
 
+    this.logNotesOverviewModel = this.applicationOverviewService.getLogNotesApplicationInformation();
+    this.logNotesTechnologyBullets = this.bulletPointService.getLogNotesApplicationBulletPoints();
+  }
 }

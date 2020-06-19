@@ -1,8 +1,17 @@
-<md-application-overview *ngIf="overviewModel"
-    [deployedUrl]="overviewModel.deployedUrl"
-    [overviewParagraphs]="overviewModel.overviewParagraphs"
-    [technologyParagraphs]="overviewModel.technologyParagraphs"
-    [title]="overviewModel.title"
-    [technologyBullets]="technologyBullets"
+<md-application-overview *ngIf="augmentedOverviewModel"
+    [deployedUrl]="augmentedOverviewModel.deployedUrl"
+    [overviewParagraphs]="augmentedOverviewModel.overviewParagraphs"
+    [technologyParagraphs]="augmentedOverviewModel.technologyParagraphs"
+    [title]="augmentedOverviewModel.title"
+    [technologyBullets]="augmentedTechnologyBullets"
+>
+</md-application-overview>
+
+<md-application-overview *ngIf="logNotesOverviewModel"
+    [deployedUrl]="logNotesOverviewModel.deployedUrl"
+    [overviewParagraphs]="logNotesOverviewModel.overviewParagraphs"
+    [technologyParagraphs]="logNotesOverviewModel.technologyParagraphs"
+    [title]="logNotesOverviewModel.title"
+    [technologyBullets]="logNotesTechnologyBullets"
 >
 </md-application-overview>
