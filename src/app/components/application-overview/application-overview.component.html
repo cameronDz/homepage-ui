@@ -8,8 +8,8 @@
             </p>
         </ng-container>
         <p *ngIf="deployedUrl">
-            {{VISIT_DEPLOYED_APPLICATION_TEXT + " "}}
-            <a href="{{deployedUrl}}" target="_blank">{{deployedUrl}}</a>.
+            {{DEPLOYED_APPLICATION_TEXT + " "}}
+            <a href="{{deployedUrl}}" target="_blank" title="{{deployedUrl}}">{{DEPLOYED_APPLICATION_LINK}}</a>.
         </p>
     </div>
 

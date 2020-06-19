@@ -8,9 +8,10 @@ import { BulletPointModel } from '../bullets-container/bullet-point.model';
 })
 export class ApplicationOverviewComponent implements OnInit {
 
+  public readonly DEPLOYED_APPLICATION_LINK: string = 'here';
+  public readonly DEPLOYED_APPLICATION_TEXT: string = 'Visit the deployed application,';
   public readonly TECHNOLOGY_LIST_TEXT: string = 'List of related pages associate with the application:';
   public readonly TECHNOLOGY_TITLE: string = 'Technologies';
-  public readonly VISIT_DEPLOYED_APPLICATION_TEXT: string = 'Visit the deployed application here;';
 
   @Input() deployedUrl: string = '';
   @Input() overviewParagraphs: Array<string> = [];
