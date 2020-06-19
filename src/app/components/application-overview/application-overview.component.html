@@ -20,13 +20,15 @@
 
         <div *ngIf="technologyBullets && !!technologyBullets.length" class="technology-bullets-container">
             <ng-container *ngFor="let bullet of technologyBullets">
-                <md-bullet-point *ngIf="bullet"
-                    [iconHref]="bullet.iconHref"
-                    [iconHrefTargetBlank]="bullet.iconHrefTargetBlank"
-                    [iconSrc]="bullet.iconSrc"
-                    [iconTitle]="bullet.iconTitle"
-                    [message]="bullet.message">
-                </md-bullet-point>
+                <div *ngIf="bullet" class="bullet-point-container">
+                    <md-bullet-point
+                        [iconHref]="bullet.iconHref"
+                        [iconHrefTargetBlank]="bullet.iconHrefTargetBlank"
+                        [iconSrc]="bullet.iconSrc"
+                        [iconTitle]="bullet.iconTitle"
+                        [message]="bullet.message">
+                    </md-bullet-point>
+                </div>
             </ng-container>
         </div>
     </div>

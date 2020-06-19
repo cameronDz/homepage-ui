@@ -1,3 +1,9 @@
-.application-overview-container .paragraph-container {
-  margin-bottom: 12px;
+.application-overview-container {
+  .bullet-point-container {
+    display: block;
+  }
+
+  .paragraph-container {
+    margin-bottom: 12px;
+  }
 }
