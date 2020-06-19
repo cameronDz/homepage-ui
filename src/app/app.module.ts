@@ -13,6 +13,7 @@ import { BulletsContainerComponent } from './components/bullets-container/bullet
 import { BulletPointComponent } from './components/bullets-container/bullet-point/bullet-point.component';
 import { ApplicationOverviewComponent } from './components/application-overview/application-overview.component';
 import { ApplicationOverviewContainerComponent } from './components/application-overview-container/application-overview-container.component';
+import { CopyrightFooterComponent } from './components/copyright-footer/copyright-footer.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ApplicationOverviewContainerComponent } from './components/application-
     BulletsContainerComponent,
     BulletPointComponent,
     ApplicationOverviewComponent,
-    ApplicationOverviewContainerComponent
+    ApplicationOverviewContainerComponent,
+    CopyrightFooterComponent
   ],
   imports: [
     BrowserModule
