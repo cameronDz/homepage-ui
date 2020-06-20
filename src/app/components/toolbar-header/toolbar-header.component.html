@@ -1,5 +1,5 @@
 <div class="toolbar" role="banner">
-    <span>{{welcome}}</span>
+    <span *ngIf="welcome">{{welcome}}</span>
     <div class="spacer"></div>
-    <span>{{goodbye}}</span>
+    <span *ngIf="goodbye">{{goodbye}}</span>
 </div>

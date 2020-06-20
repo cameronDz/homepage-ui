@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { CloudFooterComponent } from './components/cloud-footer/cloud-footer.component';
 import { ToolbarHeaderComponent } from './components/toolbar-header/toolbar-header.component';
 import { ResourceCardsComponent } from './components/resource-cards/resource-cards.component';
-import { TerminalCardsComponent } from './components/terminal-cards/terminal-cards.component';
 import { RightArrowSvgComponent } from './components/resource-cards/right-arrow-svg/right-arrow-svg.component';
 import { BulletsContainerComponent } from './components/bullets-container/bullets-container.component';
 import { BulletPointComponent } from './components/bullets-container/bullet-point/bullet-point.component';
@@ -19,7 +18,6 @@ import { CopyrightFooterComponent } from './components/copyright-footer/copyrigh
     CloudFooterComponent,
     ToolbarHeaderComponent,
     ResourceCardsComponent,
-    TerminalCardsComponent,
     RightArrowSvgComponent,
     BulletsContainerComponent,
     BulletPointComponent,
