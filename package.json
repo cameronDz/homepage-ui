@@ -33,6 +33,7 @@
     "tslib": "^1.10.0",
     "tslint": "~5.18.0",
     "typescript": "~3.7.5",
+    "websocket-extensions": "^0.1.4",
     "zone.js": "~0.10.2"
   },
   "name": "md-landing-app",
