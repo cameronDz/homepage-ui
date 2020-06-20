@@ -2,18 +2,18 @@
   "payload": {
     "bullets": [
       {
-        "iconHref": "https://camerondz.github.io/about.html",
-        "iconHrefTargetBlank": false,
-        "iconSrc": "assets/images/resume.png",
-        "iconTitle": "About Page",
-        "message": "Work experience and Education listed on the About page."
-      },
-      {
         "iconHref": "https://github.com/cameronDz",
         "iconHrefTargetBlank": true,
         "iconSrc": "assets/images/github.png",
-        "iconTitle": "GitHub Homepage",
-        "message": "Various projects in multiple languages and technologies located on GitHub."
+        "iconTitle": "Visit GitHub Homepage",
+        "message": "Project repositories for personal application located on GitHub."
+      },
+      {
+        "iconHref": "https://drive.google.com/open?id=1h3BuShxBGLIYrdUISESnVVn2GIXA_YWs",
+        "iconHrefTargetBlank": true,
+        "iconSrc": "assets/images/resume.png",
+        "iconTitle": "Open Resume PDF",
+        "message": "Resume with work experience, skill sets, and eduction, stored on Google Drive."
       }
     ]
   }
