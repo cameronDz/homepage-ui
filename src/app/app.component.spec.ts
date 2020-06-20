@@ -1,6 +1,5 @@
 import { async, TestBed, TestModuleMetadata } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import { CircleCardLinkComponent } from './components/circle-card-link/circle-card-link.component';
 import { CloudFooterComponent } from './components/cloud-footer/cloud-footer.component';
 import { LinkedFooterComponent } from './components/linked-footer/linked-footer.component';
 import { ResourceCardsComponent } from './components/resource-cards/resource-cards.component';
@@ -10,7 +9,6 @@ import { ToolbarHeaderComponent } from './components/toolbar-header/toolbar-head
 describe('AppComponent', () => {
   const config: TestModuleMetadata = { declarations: [
     AppComponent,
-    CircleCardLinkComponent,
     CloudFooterComponent,
     LinkedFooterComponent,
     ResourceCardsComponent,
@@ -30,8 +28,8 @@ describe('AppComponent', () => {
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    const expectd: string = fixture.componentInstance.title;
-    expect(compiled.querySelector('.content h1').textContent).toContain(expectd);
+    const actual = fixture.nativeElement.querySelector('.content h1').textContent;
+    const expected: string = fixture.componentInstance.title;
+    expect(actual).toContain(expected);
   });
 });
