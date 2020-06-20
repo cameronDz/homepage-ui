@@ -1,7 +1,6 @@
 import { async, TestBed, TestModuleMetadata } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { CloudFooterComponent } from './components/cloud-footer/cloud-footer.component';
-import { LinkedFooterComponent } from './components/linked-footer/linked-footer.component';
 import { ResourceCardsComponent } from './components/resource-cards/resource-cards.component';
 import { TerminalCardsComponent } from './components/terminal-cards/terminal-cards.component';
 import { ToolbarHeaderComponent } from './components/toolbar-header/toolbar-header.component';
@@ -10,7 +9,6 @@ describe('AppComponent', () => {
   const config: TestModuleMetadata = { declarations: [
     AppComponent,
     CloudFooterComponent,
-    LinkedFooterComponent,
     ResourceCardsComponent,
     TerminalCardsComponent,
     ToolbarHeaderComponent
