@@ -2,13 +2,11 @@
 
 <div class="content" role="main">
     <div class="card highlight-card card-small jumbotron">
-        <h1>{{ title }}</h1>
-        <h3>{{ subtitle }}</h3>
+        <h1 *ngIf="title">{{title}}</h1>
+        <h3 *ngIf="subtitle">{{subtitle}}</h3>
     </div>
 
-    <ng-container *ngIf="showBullets">
-        <md-bullets-container [points]="overviewBullets"></md-bullets-container>
-    </ng-container>
+    <md-bullets-container *ngIf="showBullets"[points]="overviewBullets"></md-bullets-container>
 
     <md-application-overview-container></md-application-overview-container>
     <md-copyright-footer></md-copyright-footer>
