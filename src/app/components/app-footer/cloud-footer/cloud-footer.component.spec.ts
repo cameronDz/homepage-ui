@@ -7,10 +7,7 @@ describe('CloudFooterComponent', () => {
   let fixture: ComponentFixture<CloudFooterComponent>;
 
   beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ CloudFooterComponent ]
-    })
-    .compileComponents();
+    TestBed.configureTestingModule({ declarations: [ CloudFooterComponent ] }).compileComponents();
   }));
 
   beforeEach(() => {

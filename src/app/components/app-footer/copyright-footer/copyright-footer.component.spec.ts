@@ -7,10 +7,7 @@ describe('CopyrightFooterComponent', () => {
   let fixture: ComponentFixture<CopyrightFooterComponent>;
 
   beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ CopyrightFooterComponent ]
-    })
-    .compileComponents();
+    TestBed.configureTestingModule({ declarations: [ CopyrightFooterComponent ] }).compileComponents();
   }));
 
   beforeEach(() => {
