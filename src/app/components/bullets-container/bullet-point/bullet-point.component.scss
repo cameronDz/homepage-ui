@@ -36,3 +36,9 @@
     transform: translateY(-0.25rem);
   }
 }
+
+@media screen and (max-width: 475px) {
+  .bullet-container {
+    margin-top: 12px;
+  }
+}

@@ -11,6 +11,8 @@ import { BulletPointModel } from '../bullets-container/bullet-point.model';
 })
 export class ApplicationOverviewContainerComponent implements OnInit {
 
+  public readonly APPLICATIONS_HEADER: string = 'Deployed Applications';
+
   public augmentedOverviewModel: ApplicationOverviewModel;
   public augmentedTechnologyBullets: Array<BulletPointModel>;
 
