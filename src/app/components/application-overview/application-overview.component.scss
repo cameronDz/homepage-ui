@@ -11,3 +11,9 @@
     margin-bottom: 12px;
   }
 }
+
+@media screen and (min-width: 767px) {
+  .technology-bullets-container .bullet-point-container {
+    margin-left: 24px;
+  }
+}
