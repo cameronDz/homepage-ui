@@ -2,8 +2,8 @@
 
 <div class="content" role="main">
     <div class="card highlight-card card-small jumbotron">
-        <h1 *ngIf="title">{{title}}</h1>
-        <h3 *ngIf="subtitle">{{subtitle}}</h3>
+        <h1 *ngIf="title" tabindex="0">{{title}}</h1>
+        <h3 *ngIf="subtitle" tabindex="0">{{subtitle}}</h3>
     </div>
 
     <md-bullets-container *ngIf="showBullets"[points]="overviewBullets"></md-bullets-container>
