@@ -19,6 +19,5 @@ export class ApplicationHeaderComponent implements OnInit {
     if (this.clickedToExpand) {
       this.clickedToExpand.emit(expanded);
     }
-    console.log('handleClickedToExpand', expanded);
   }
 }

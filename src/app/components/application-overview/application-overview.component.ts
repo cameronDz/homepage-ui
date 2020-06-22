@@ -30,7 +30,6 @@ export class ApplicationOverviewComponent implements OnInit {
 
   public handleClickedToExpanded(expanded: boolean): void {
     this.expandedStatusClassName = expanded ? this.EXPANDED_CLASS_NAME : this.COLLAPSED_CLASS_NAME;
-    console.log('expanded', expanded);
   }
 
 }
