@@ -10,6 +10,7 @@ import { BulletsContainerComponent } from './components/bullets-container/bullet
 import { BulletPointComponent } from './components/bullets-container/bullet-point/bullet-point.component';
 import { ApplicationOverviewContainerComponent } from './components/application-overview-container/application-overview-container.component';
 import { ApplicationHeaderComponent } from './components/application-overview/application-header/application-header.component';
+import { CollapsibleIconComponent } from './components/application-overview/application-header/collapsible-icon/collapsible-icon.component';
 
 describe('AppComponent', () => {
   const config: TestModuleMetadata = {
@@ -22,6 +23,7 @@ describe('AppComponent', () => {
       BulletsContainerComponent,
       BulletPointComponent,
       CloudFooterComponent,
+      CollapsibleIconComponent,
       CopyrightFooterComponent,
       ResourceCardsComponent,
       ToolbarHeaderComponent

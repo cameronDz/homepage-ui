@@ -4,6 +4,7 @@ import { ApplicationOverviewContainerComponent } from './application-overview-co
 import { ApplicationOverviewComponent } from '../application-overview/application-overview.component';
 import { BulletPointComponent } from '../bullets-container/bullet-point/bullet-point.component';
 import { ApplicationHeaderComponent } from '../application-overview/application-header/application-header.component';
+import { CollapsibleIconComponent } from '../application-overview/application-header/collapsible-icon/collapsible-icon.component';
 
 describe('ApplicationOverviewContainerComponent', () => {
   let component: ApplicationOverviewContainerComponent;
@@ -13,6 +14,7 @@ describe('ApplicationOverviewContainerComponent', () => {
       ApplicationHeaderComponent,
       ApplicationOverviewComponent,
       ApplicationOverviewContainerComponent,
+      CollapsibleIconComponent,
       BulletPointComponent
     ]
   };
