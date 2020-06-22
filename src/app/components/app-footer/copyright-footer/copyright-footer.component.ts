@@ -7,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CopyrightFooterComponent implements OnInit {
 
-  public readonly COPYRIGHT_TEXT: string = '2020 Cam Dziurgot';
+  private readonly COPYRIGHT_NAME: string = 'Cam Dziurgot';
+  public copyrightText: string = '';
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    const year: number = new Date().getFullYear();
+    this.copyrightText = year + ' ' + this.COPYRIGHT_NAME;
+  }
 
 }
