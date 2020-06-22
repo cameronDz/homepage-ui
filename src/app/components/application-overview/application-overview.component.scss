@@ -5,6 +5,14 @@
     display: block;
   }
 
+  .collapsed-application-content {
+    display: none;
+  }
+
+  .expanded-application-content {
+    display: block;
+  }
+
   .paragraph-container {
     margin-bottom: 12px;
     text-align: justify;

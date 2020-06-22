@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'md-application-header',
@@ -7,10 +7,18 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ApplicationHeaderComponent implements OnInit {
 
+  @Output() clickedToExpand: EventEmitter<boolean> = new EventEmitter<boolean>();
+
   @Input() title: string = '';
 
   constructor() {}
 
   ngOnInit(): void {}
 
+  public handleClickedToExpand(expanded: boolean): void {
+    if (this.clickedToExpand) {
+      this.clickedToExpand.emit(expanded);
+    }
+    console.log('handleClickedToExpand', expanded);
+  }
 }

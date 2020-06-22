@@ -1,1 +1,4 @@
-<h2 *ngIf="title" class="application-title" tabindex="0">{{title}}</h2>
+<div class="header-container">
+    <h2 *ngIf="title" class="application-title" tabindex="0">{{title}}</h2>
+    <md-collapsible-icon (clickedToExpand)="handleClickedToExpand($event)"></md-collapsible-icon>
+</div>

@@ -1,42 +1,47 @@
 <div class="application-overview-container">
-    <md-application-header [title]="title"></md-application-header>
+    <md-application-header
+        [title]="title"
+        (clickedToExpand)="handleClickedToExpanded($event)">
+    </md-application-header>
 
-    <div *ngIf="overviewParagraphs" class="overview-paragraphs-container">
-        <ng-container *ngFor="let paragraph of overviewParagraphs">
-            <p *ngIf="paragraph" class="paragraph-container" tabindex="0">
-                {{paragraph}}
-            </p>
-        </ng-container>
-        <p *ngIf="deployedUrl" tabindex="0">
-            {{DEPLOYED_APPLICATION_TEXT + " "}}
-            <a href="{{deployedUrl}}" target="_blank" title="{{deployedUrl}}">{{DEPLOYED_APPLICATION_LINK}}</a>.
-        </p>
-    </div>
-
-    <div *ngIf="technologyParagraphs && !!technologyParagraphs.length" class="technology-section-container">
-        <h3 *ngIf="TECHNOLOGY_TITLE" tabindex="0">{{TECHNOLOGY_TITLE}}</h3>
-
-        <ng-container *ngFor="let paragraph of technologyParagraphs">
-            <p *ngIf="paragraph" class="paragraph-container" tabindex="0">
-                {{paragraph}}
-            </p>
-        </ng-container>
-
-        <div *ngIf="technologyBullets && !!technologyBullets.length" class="technology-bullets-container">
-            <p *ngIf="TECHNOLOGY_LIST_TEXT" class="paragraph-container" tabindex="0">
-                {{TECHNOLOGY_LIST_TEXT}}
-            </p>
-            <ng-container *ngFor="let bullet of technologyBullets">
-                <div *ngIf="bullet" class="bullet-point-container">
-                    <md-bullet-point
-                        [iconHref]="bullet.iconHref"
-                        [iconHrefTargetBlank]="bullet.iconHrefTargetBlank"
-                        [iconSrc]="bullet.iconSrc"
-                        [iconTitle]="bullet.iconTitle"
-                        [message]="bullet.message">
-                    </md-bullet-point>
-                </div>
+    <div class="{{expandedStatusClassName}}">
+        <div *ngIf="overviewParagraphs" class="overview-paragraphs-container">
+            <ng-container *ngFor="let paragraph of overviewParagraphs">
+                <p *ngIf="paragraph" class="paragraph-container" tabindex="0">
+                    {{paragraph}}
+                </p>
             </ng-container>
+            <p *ngIf="deployedUrl" tabindex="0">
+                {{DEPLOYED_APPLICATION_TEXT + " "}}
+                <a href="{{deployedUrl}}" target="_blank" title="{{deployedUrl}}">{{DEPLOYED_APPLICATION_LINK}}</a>.
+            </p>
+        </div>
+
+        <div *ngIf="technologyParagraphs && !!technologyParagraphs.length" class="technology-section-container">
+            <h3 *ngIf="TECHNOLOGY_TITLE" tabindex="0">{{TECHNOLOGY_TITLE}}</h3>
+
+            <ng-container *ngFor="let paragraph of technologyParagraphs">
+                <p *ngIf="paragraph" class="paragraph-container" tabindex="0">
+                    {{paragraph}}
+                </p>
+            </ng-container>
+
+            <div *ngIf="technologyBullets && !!technologyBullets.length" class="technology-bullets-container">
+                <p *ngIf="TECHNOLOGY_LIST_TEXT" class="paragraph-container" tabindex="0">
+                    {{TECHNOLOGY_LIST_TEXT}}
+                </p>
+                <ng-container *ngFor="let bullet of technologyBullets">
+                    <div *ngIf="bullet" class="bullet-point-container">
+                        <md-bullet-point
+                            [iconHref]="bullet.iconHref"
+                            [iconHrefTargetBlank]="bullet.iconHrefTargetBlank"
+                            [iconSrc]="bullet.iconSrc"
+                            [iconTitle]="bullet.iconTitle"
+                            [message]="bullet.message">
+                        </md-bullet-point>
+                    </div>
+                </ng-container>
+            </div>
         </div>
     </div>
 </div>
