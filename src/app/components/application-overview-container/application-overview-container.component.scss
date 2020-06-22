@@ -1,8 +1,12 @@
-.applications-header {
-  margin-top: 16px;
-  text-align: center;
-}
+:host {
+  width: 100%;
 
-.application-overview-element-container {
-  margin-top: 16px;
+  .applications-header {
+    margin-top: 16px;
+    text-align: center;
+  }
+
+  .application-overview-element-container {
+    margin-top: 16px;
+  }
 }
