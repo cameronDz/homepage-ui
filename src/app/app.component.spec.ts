@@ -9,12 +9,14 @@ import { CopyrightFooterComponent } from './components/app-footer/copyright-foot
 import { BulletsContainerComponent } from './components/bullets-container/bullets-container.component';
 import { BulletPointComponent } from './components/bullets-container/bullet-point/bullet-point.component';
 import { ApplicationOverviewContainerComponent } from './components/application-overview-container/application-overview-container.component';
+import { ApplicationHeaderComponent } from './components/application-overview/application-header/application-header.component';
 
 describe('AppComponent', () => {
   const config: TestModuleMetadata = {
     declarations: [
       AppComponent,
       AppFooterComponent,
+      ApplicationHeaderComponent,
       ApplicationOverviewComponent,
       ApplicationOverviewContainerComponent,
       BulletsContainerComponent,

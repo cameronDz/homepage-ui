@@ -1,5 +1,5 @@
 <div class="application-overview-container">
-    <h2 *ngIf="title" class="application-title" tabindex="0">{{title}}</h2>
+    <md-application-header [title]="title"></md-application-header>
 
     <div *ngIf="overviewParagraphs" class="overview-paragraphs-container">
         <ng-container *ngFor="let paragraph of overviewParagraphs">

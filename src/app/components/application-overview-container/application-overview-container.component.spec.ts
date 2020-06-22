@@ -3,12 +3,14 @@ import { async, ComponentFixture, TestBed, TestModuleMetadata } from '@angular/c
 import { ApplicationOverviewContainerComponent } from './application-overview-container.component';
 import { ApplicationOverviewComponent } from '../application-overview/application-overview.component';
 import { BulletPointComponent } from '../bullets-container/bullet-point/bullet-point.component';
+import { ApplicationHeaderComponent } from '../application-overview/application-header/application-header.component';
 
 describe('ApplicationOverviewContainerComponent', () => {
   let component: ApplicationOverviewContainerComponent;
   let fixture: ComponentFixture<ApplicationOverviewContainerComponent>;
   const testConfig: TestModuleMetadata = {
     declarations: [
+      ApplicationHeaderComponent,
       ApplicationOverviewComponent,
       ApplicationOverviewContainerComponent,
       BulletPointComponent
