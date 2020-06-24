@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { ToolbarHeaderComponent } from './components/toolbar-header/toolbar-header.component';
@@ -36,6 +37,7 @@ import { ApplicationHeaderComponent } from './components/application-overview/ap
     ApplicationHeaderComponent
   ],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule
   ],
   providers: [],
