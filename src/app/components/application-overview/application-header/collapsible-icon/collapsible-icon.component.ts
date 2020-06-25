@@ -7,7 +7,6 @@ import { TextState } from '../../text-state.enum';
   templateUrl: './collapsible-icon.component.html',
   styleUrls: ['./collapsible-icon.component.scss'],
   animations: [
-    // Each unique animation requires its own trigger. The first argument of the trigger function is the name
     trigger('rotatedState', [
       state(TextState.EXPANDED, style({ transform: 'rotate(90deg)' })),
       state(TextState.COLLAPSED, style({ transform: 'rotate(0deg)' })),
@@ -19,7 +18,7 @@ import { TextState } from '../../text-state.enum';
 export class CollapsibleIconComponent implements OnChanges, OnInit {
 
   private readonly COLLAPSE_TEXT: string = 'Click to Show Less';
-  private readonly EXPAND_TEXT: string = 'Click to Expand';
+  private readonly EXPAND_TEXT: string = 'Click to Read More';
 
   public readonly IMAGE_SRC: string = 'assets/images/black-expand-triangle.png';
 

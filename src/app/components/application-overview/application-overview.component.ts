@@ -1,11 +1,20 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { animate, state, style, transition, trigger } from '@angular/animations';
 import { BulletPointModel } from '../bullets-container/bullet-point.model';
 import { TextState } from './text-state.enum';
 
 @Component({
   selector: 'md-application-overview',
   templateUrl: './application-overview.component.html',
-  styleUrls: ['./application-overview.component.scss']
+  styleUrls: ['./application-overview.component.scss'],
+  animations: [
+    trigger('overviewTextState', [
+      state(TextState.EXPANDED, style({ height: '*' })),
+      state(TextState.COLLAPSED, style({ height: '90px' })),
+      transition(`${TextState.COLLAPSED} => ${TextState.EXPANDED}`, animate('750ms ease-out')),
+      transition(`${TextState.EXPANDED} => ${TextState.COLLAPSED}`, animate('750ms ease-in'))
+    ])
+  ]
 })
 export class ApplicationOverviewComponent implements OnInit {
 

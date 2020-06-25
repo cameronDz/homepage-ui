@@ -5,7 +5,7 @@
         (clickedToExpand)="handleClickedToExpanded($event)">
     </md-application-header>
 
-    <div class="{{expandedStatusClassName}}">
+    <div [@overviewTextState]="textState" class="application-content">
         <div *ngIf="overviewParagraphs && !!overviewParagraphs.length" class="overview-paragraphs-container">
             <ng-container *ngFor="let paragraph of overviewParagraphs">
                 <p *ngIf="paragraph" class="paragraph-container" tabindex="0">

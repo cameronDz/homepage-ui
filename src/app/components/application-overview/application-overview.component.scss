@@ -5,12 +5,8 @@
     display: block;
   }
 
-  .collapsed-application-content {
-    display: none;
-  }
-
-  .expanded-application-content {
-    display: block;
+  .application-content {
+    overflow: hidden;
   }
 
   .paragraph-container {
