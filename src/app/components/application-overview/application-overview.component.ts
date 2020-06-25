@@ -1,5 +1,6 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
 import { BulletPointModel } from '../bullets-container/bullet-point.model';
+import { TextState } from './text-state.enum';
 
 @Component({
   selector: 'md-application-overview',
@@ -23,13 +24,15 @@ export class ApplicationOverviewComponent implements OnInit {
   @Input() title: string = '';
 
   public expandedStatusClassName: string = '';
+  public textState: TextState = TextState.EXPANDED;
 
   constructor() {}
 
   ngOnInit(): void {}
 
-  public handleClickedToExpanded(expanded: boolean): void {
-    this.expandedStatusClassName = expanded ? this.EXPANDED_CLASS_NAME : this.COLLAPSED_CLASS_NAME;
+  public handleClickedToExpanded(updateTextState: TextState): void {
+    this.textState = updateTextState;
+    this.expandedStatusClassName = updateTextState === TextState.EXPANDED ? this.EXPANDED_CLASS_NAME : this.COLLAPSED_CLASS_NAME;
   }
 
 }
