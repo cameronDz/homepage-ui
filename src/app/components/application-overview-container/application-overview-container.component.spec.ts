@@ -5,6 +5,7 @@ import { ApplicationOverviewComponent } from '../application-overview/applicatio
 import { BulletPointComponent } from '../bullets-container/bullet-point/bullet-point.component';
 import { ApplicationHeaderComponent } from '../application-overview/application-header/application-header.component';
 import { CollapsibleIconComponent } from '../application-overview/application-header/collapsible-icon/collapsible-icon.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('ApplicationOverviewContainerComponent', () => {
   let component: ApplicationOverviewContainerComponent;
@@ -16,7 +17,8 @@ describe('ApplicationOverviewContainerComponent', () => {
       ApplicationOverviewContainerComponent,
       CollapsibleIconComponent,
       BulletPointComponent
-    ]
+    ],
+    imports: [ BrowserAnimationsModule ]
   };
 
   beforeEach(async(() => {

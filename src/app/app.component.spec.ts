@@ -1,4 +1,5 @@
 import { async, TestBed, TestModuleMetadata } from '@angular/core/testing';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { ResourceCardsComponent } from './components/resource-cards/resource-cards.component';
 import { ToolbarHeaderComponent } from './components/toolbar-header/toolbar-header.component';
@@ -27,7 +28,8 @@ describe('AppComponent', () => {
       CopyrightFooterComponent,
       ResourceCardsComponent,
       ToolbarHeaderComponent
-    ]
+    ],
+    imports: [ BrowserAnimationsModule ]
   };
 
   beforeEach(async(() => {

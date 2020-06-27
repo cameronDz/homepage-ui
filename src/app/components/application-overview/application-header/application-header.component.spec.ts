@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed, TestModuleMetadata } from '@angular/core/testing';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ApplicationHeaderComponent } from './application-header.component';
 import { CollapsibleIconComponent } from './collapsible-icon/collapsible-icon.component';
@@ -10,7 +11,8 @@ describe('ApplicationHeaderComponent', () => {
     declarations: [
       ApplicationHeaderComponent,
       CollapsibleIconComponent
-    ]
+    ],
+    imports: [ BrowserAnimationsModule ]
   };
 
   beforeEach(async(() => {
