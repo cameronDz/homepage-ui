@@ -7,11 +7,27 @@
 
   .application-content {
     overflow: hidden;
+    padding-bottom: 12px;
   }
 
   .paragraph-container {
     margin-bottom: 12px;
     text-align: justify;
+  }
+
+  .text-expand-collapse-button {
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    width: 100%;
+
+    .button-block {
+      background-color: rgba(236, 240, 241, 1);
+      border: solid .5px rgba(black, 0.5);
+      border-radius: 5px;
+      cursor: pointer;
+      padding: 2px 18px;
+    }
   }
 }
 

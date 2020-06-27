@@ -45,4 +45,9 @@
             </div>
         </div>
     </div>
+    <div *ngIf="currentExpandCollapseText" class="text-expand-collapse-button">
+        <span class="button-block" role="button" (click)="handleExpandCollapseButtonClick()">
+            {{currentExpandCollapseText}}
+        </span>
+    </div>
 </div>

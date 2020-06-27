@@ -10,7 +10,9 @@ import { TextState } from './text-state.enum';
   animations: [
     trigger('overviewTextState', [
       state(TextState.EXPANDED, style({ height: '*' })),
-      state(TextState.COLLAPSED, style({ height: '90px' })),
+      state(TextState.COLLAPSED, style({
+        '-webkit-mask-image': 'linear-gradient(to bottom, black 50%, transparent 100%)',
+        height: '90px' })),
       transition(`${TextState.COLLAPSED} => ${TextState.EXPANDED}`, animate('750ms ease-out')),
       transition(`${TextState.EXPANDED} => ${TextState.COLLAPSED}`, animate('750ms ease-in'))
     ])
@@ -18,8 +20,8 @@ import { TextState } from './text-state.enum';
 })
 export class ApplicationOverviewComponent implements OnInit {
 
-  private readonly EXPANDED_CLASS_NAME: string = 'expanded-application-content';
-  private readonly COLLAPSED_CLASS_NAME: string = 'collapsed-application-content';
+  private readonly EXPANDED_TEXT: string = 'Click to Show Less';
+  private readonly COLLAPSED_TEXT: string = 'Click to Read More';
 
   public readonly DEPLOYED_APPLICATION_LINK: string = 'here';
   public readonly DEPLOYED_APPLICATION_TEXT: string = 'Visit the deployed application,';
@@ -32,16 +34,24 @@ export class ApplicationOverviewComponent implements OnInit {
   @Input() technologyParagraphs: Array<string> = [];
   @Input() title: string = '';
 
-  public expandedStatusClassName: string = '';
-  public textState: TextState = TextState.EXPANDED;
+  public currentExpandCollapseText: string = this.COLLAPSED_TEXT;
+  public textState: TextState = TextState.COLLAPSED;
 
   constructor() {}
 
   ngOnInit(): void {}
 
-  public handleClickedToExpanded(updateTextState: TextState): void {
-    this.textState = updateTextState;
-    this.expandedStatusClassName = updateTextState === TextState.EXPANDED ? this.EXPANDED_CLASS_NAME : this.COLLAPSED_CLASS_NAME;
+  public handleClickedToExpanded(newState: TextState): void {
+    this.updateExpandCollapseStatus(newState);
   }
 
+  public handleExpandCollapseButtonClick(): void {
+    const newState: TextState = (this.textState === TextState.EXPANDED) ? TextState.COLLAPSED : TextState.EXPANDED;
+    this.updateExpandCollapseStatus(newState);
+  }
+
+  private updateExpandCollapseStatus(newState: TextState): void {
+    this.textState = newState;
+    this.currentExpandCollapseText = (this.textState === TextState.EXPANDED) ? this.EXPANDED_TEXT : this.COLLAPSED_TEXT;
+  }
 }
