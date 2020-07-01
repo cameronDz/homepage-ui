@@ -1,6 +1,7 @@
 import { Component, EventEmitter, OnChanges, OnInit, Output, Input, SimpleChanges } from '@angular/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { TextState } from '../../text-state.enum';
+import { ApplicationOverviewText } from '../../application-overview-text.enum';
 
 @Component({
   selector: 'md-collapsible-icon',
@@ -17,8 +18,8 @@ import { TextState } from '../../text-state.enum';
 })
 export class CollapsibleIconComponent implements OnChanges, OnInit {
 
-  private readonly COLLAPSE_TEXT: string = 'Click to Show Less';
-  private readonly EXPAND_TEXT: string = 'Click to Read More';
+  private readonly COLLAPSE_TEXT: string = ApplicationOverviewText.CLICK_TO_COLLAPSE_TEXT;
+  private readonly EXPAND_TEXT: string = ApplicationOverviewText.CLICK_TO_EXPAND_TEXT;
 
   public readonly IMAGE_SRC: string = 'assets/images/black-expand-triangle.png';
 

@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { BulletPointModel } from '../bullets-container/bullet-point.model';
 import { TextState } from './text-state.enum';
+import { ApplicationOverviewText } from './application-overview-text.enum';
 
 @Component({
   selector: 'md-application-overview',
@@ -20,8 +21,8 @@ import { TextState } from './text-state.enum';
 })
 export class ApplicationOverviewComponent implements OnInit {
 
-  private readonly EXPANDED_TEXT: string = 'Click to Show Less';
-  private readonly COLLAPSED_TEXT: string = 'Click to Read More';
+  private readonly EXPANDED_TEXT: string = ApplicationOverviewText.CLICK_TO_COLLAPSE_TEXT;
+  private readonly COLLAPSED_TEXT: string = ApplicationOverviewText.CLICK_TO_EXPAND_TEXT;
 
   public readonly DEPLOYED_APPLICATION_LINK: string = 'here';
   public readonly DEPLOYED_APPLICATION_TEXT: string = 'Visit the deployed application,';
