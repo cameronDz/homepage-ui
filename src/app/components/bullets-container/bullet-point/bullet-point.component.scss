@@ -1,5 +1,14 @@
+:host {
+  display: flex;
+}
+
 .bullet-container {
   display: inline-flex;
+  /* added for IE bug for margin: auto on .bullet-point-container class */
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 
   .bullet-point-container {
     margin: auto;
