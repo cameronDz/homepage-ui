@@ -12,7 +12,7 @@ import { ApplicationOverviewText } from './application-overview-text.enum';
     trigger('overviewTextState', [
       state(TextState.EXPANDED, style({ height: '*' })),
       state(TextState.COLLAPSED, style({
-        maskImage: 'linear-gradient(to bottom, black 50%, transparent 100%)',
+        webkitMaskImage: 'linear-gradient(to bottom, black 50%, transparent 100%)',
         height: '90px' })),
       transition(`${TextState.COLLAPSED} => ${TextState.EXPANDED}`, animate('750ms ease-out')),
       transition(`${TextState.EXPANDED} => ${TextState.COLLAPSED}`, animate('750ms ease-in'))
