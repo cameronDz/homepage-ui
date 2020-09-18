@@ -49,5 +49,5 @@
     "test": "ng test --watch=false --code-coverage --browsers ChromeHeadless",
     "lint": "ng lint"
   },
-  "version": "1.0.0"
+  "version": "1.1.0"
 }
