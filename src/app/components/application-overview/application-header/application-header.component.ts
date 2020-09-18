@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { TextState } from '../text-state.enum';
+import { TextState } from '../../../models/styles.enum';
 
 @Component({
   selector: 'md-application-header',

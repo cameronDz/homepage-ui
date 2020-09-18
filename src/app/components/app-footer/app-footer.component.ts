@@ -2,14 +2,12 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'md-app-footer',
-  templateUrl: './app-footer.component.html',
-  styleUrls: ['./app-footer.component.scss']
+  templateUrl: './app-footer.component.html'
 })
 export class AppFooterComponent implements OnInit {
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
 }

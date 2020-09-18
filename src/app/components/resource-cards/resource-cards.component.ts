@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'md-resource-cards',
-  templateUrl: './resource-cards.component.html',
-  styleUrls: ['./resource-cards.component.scss']
+  templateUrl: './resource-cards.component.html'
 })
 export class ResourceCardsComponent implements OnInit {
 

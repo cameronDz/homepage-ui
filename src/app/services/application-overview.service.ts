@@ -1,18 +1,26 @@
 import { Injectable } from '@angular/core';
-import { ApplicationOverviewModel } from './application-overview.model';
-import * as _applicationOverviews from '../../../assets/data/applicationOverviews.json';
+import { Subscription } from 'rxjs';
 
-enum ApplicationName {
-  AUGMENTED = 'augmented',
-  LOG_NOTES = 'logNotes'
-}
+import { ApplicationName, ApplicationOverviewModel } from '../models/application-overview.model';
+import { DataOptions } from '../models/data-options.model';
+import * as _applicationOverviews from '../../assets/data/applicationOverviews.json';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable({ providedIn: 'root' })
 export class ApplicationOverviewService {
 
   constructor() { }
+
+  public retrieveApplicationInformation(self: any, options: DataOptions, successCallback: any, errorCallback: any, completedCallback: any): Subscription {
+    if (!!options && options.applicationName === ApplicationName.AUGMENTED) {
+      successCallback(self, this.getApplicationInformation(ApplicationName.AUGMENTED));
+    } else if (!!options && options.applicationName === ApplicationName.LOG_NOTES) {
+      successCallback(self, this.getApplicationInformation(ApplicationName.LOG_NOTES));
+    } else {
+      errorCallback(self, 'INVALID-OPTIONS');
+    }
+    completedCallback(self);
+    return null;
+  }
 
   public getAugmentedApplicationInformation(): ApplicationOverviewModel {
     return this.getApplicationInformation(ApplicationName.AUGMENTED);

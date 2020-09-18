@@ -1,7 +1,7 @@
 import { Component, EventEmitter, OnChanges, OnInit, Output, Input, SimpleChanges } from '@angular/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { TextState } from '../../text-state.enum';
-import { ApplicationOverviewText } from '../../application-overview-text.enum';
+import { TextState } from '../../../../models/styles.enum';
+import { ApplicationOverviewText } from '../../../../models/application-overview.model';
 
 @Component({
   selector: 'md-collapsible-icon',

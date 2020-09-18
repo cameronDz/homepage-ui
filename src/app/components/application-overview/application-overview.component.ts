@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { BulletPointModel } from '../bullets-container/bullet-point.model';
-import { TextState } from './text-state.enum';
-import { ApplicationOverviewText } from './application-overview-text.enum';
+import { BulletPointModel } from '../../models/bullet-point.model';
+import { TextState } from '../../models/styles.enum';
+import { ApplicationOverviewText } from '../../models/application-overview.model';
 
 @Component({
   selector: 'md-application-overview',

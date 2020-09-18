@@ -10,9 +10,8 @@ export class ToolbarHeaderComponent implements OnInit {
   @Input() welcome: string = '';
   @Input() goodbye: string = '';
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
 }

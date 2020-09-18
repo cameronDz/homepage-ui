@@ -1,14 +1,13 @@
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
-import { BulletPointModel } from './bullet-point.model';
+import { BulletPointModel } from '../../models/bullet-point.model';
 
 @Component({
   selector: 'md-bullets-container',
-  templateUrl: './bullets-container.component.html',
-  styleUrls: ['./bullets-container.component.scss']
+  templateUrl: './bullets-container.component.html'
 })
 export class BulletsContainerComponent implements OnChanges, OnInit {
 
-  @Input() points: Array<BulletPointModel> = [];
+  @Input() points: Array<BulletPointModel> = null;
 
   public hasContent: boolean = false;
 

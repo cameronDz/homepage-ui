@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ApplicationOverviewComponent } from './application-overview.component';
 import { ApplicationHeaderComponent } from './application-header/application-header.component';
 import { CollapsibleIconComponent } from './application-header/collapsible-icon/collapsible-icon.component';
-import { BulletPointModel } from '../bullets-container/bullet-point.model';
+import { BulletPointModel } from '../../models/bullet-point.model';
 import { BulletPointComponent } from '../bullets-container/bullet-point/bullet-point.component';
 
 @Component({ template:
