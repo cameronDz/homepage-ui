@@ -2,8 +2,9 @@
   "author": {
     "email": "camerondziurgot@gmail.com",
     "name": "Cam Dziurgot",
-    "url": "http://camdziurgot.io/"
+    "url": "https://www.camdziurgot.io/"
   },
+  "description": "Landing page application for personal webpage.",
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.901.9",
     "@angular/animations": "~9.0.1",
@@ -38,6 +39,7 @@
     "websocket-extensions": "^0.1.4",
     "zone.js": "~0.10.2"
   },
+  "homepage": "https://www.camdziurgot.io/",
   "name": "md-landing-app",
   "private": true,
   "repository": {
