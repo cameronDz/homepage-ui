@@ -34,6 +34,9 @@ The deployment process is currently a manual process;
         - Setup an IAM User, and under Security Credentials, create an access key and copy credentials to EC2 using ```aws configure``` command
 1. Once the transfer is done, a cache clear on a local browser can verify the changes went through with the new deploy.
 
+## TODO ##
+1. Upgrade to Angular 10.x.x
+
 ## Generated NG sections ##
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.2.
