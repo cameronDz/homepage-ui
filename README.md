@@ -1,4 +1,4 @@
-# MD Landing Page Application #
+# Homepage Application #
 Application is a Single Page Application written in Angular, generated using Angular CLI, with the purpose to be the landing page for a portfolio website, as well as portal into personal webpages.
 
 ## AWS Environment Setup ##
