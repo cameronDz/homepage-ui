@@ -14,14 +14,14 @@
     "articleNotes": {
       "deployedUrl": "https://camdziurgot.io/article-notes/",
       "overviewParagraphs": [
-        "The Article Notes application is an application meant for creating, accessing, and organizing various notes of articles read by a user. The primary purpose of the deployed application now is to create notes from Medium.com articles to use for references in future articles and white papers on technology. Eventually, the application will evolve to support multiple types of notes by using multiple types of forms."
+        "The Article-Notes UI application is an application meant for creating, accessing, and organizing various notes of articles read by a user. The primary purpose of the deployed application now is to create notes from Medium.com articles to use for references in future articles and white papers on technology. Eventually, the application will evolve to support multiple types of notes by using multiple types of forms."
       ],
       "technologyParagraphs": [
         "The frontend is a ReactJS SPA that uses Material UI for styling, ES Lint with Mocha for code quality and unit testing, and Webpack for bundling the application. It has a manual deploy to a statically hosted AWS S3 bucket using a combination of an NPM script in the project and AWS CLI.",
         "The backend of the application is made using a Java Spring Boot framework built with Apache Maven. The API is used to perform basic CRUD functionality with JSON objects in an S3 bucket (seperate from the statically hosted bucket), that requires authentication for any functionality besides retrieval.",
         "The API is deployed to a Heroku cloud server in a fully automated pipeline that runs anytime the a commit is made to the master branch of the applications GitHub repository."
       ],
-      "title": "Article Notes"
+      "title": "Article-Notes UI"
     }
   }
 }
