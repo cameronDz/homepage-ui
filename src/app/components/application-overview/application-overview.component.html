@@ -3,7 +3,7 @@
         [textState]="textState"
         [title]="title"
         (clickedToExpand)="handleClickedToExpanded($event)">
-    </md-application-header>
+    </nssd-application-header>
 
     <div [@overviewTextState]="textState" class="application-content">
         <div *ngIf="overviewParagraphs && !!overviewParagraphs.length" class="overview-paragraphs-container">
@@ -39,7 +39,7 @@
                             [iconSrc]="bullet.iconSrc"
                             [iconTitle]="bullet.iconTitle"
                             [message]="bullet.message">
-                        </md-bullet-point>
+                        </nssd-bullet-point>
                     </div>
                 </ng-container>
             </div>

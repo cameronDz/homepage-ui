@@ -19,7 +19,7 @@ import { BulletPointComponent } from '../bullets-container/bullet-point/bullet-p
       [technologyParagraphs]="stringArray"
       [title]="title"
       [technologyBullets]="technologyBullets">
-    </md-application-overview>
+    </nssd-application-overview>
   </div>` })
   class TestWrapperComponent {
     public showComponent: boolean = false;
