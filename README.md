@@ -35,7 +35,8 @@ The deployment process is currently a manual process;
 1. Once the transfer is done, a cache clear on a local browser can verify the changes went through with the new deploy.
 
 ## TODO ##
-1. Upgrade to Angular 10.x.x
+- [ ] Upgrade to Angular 10.x.x
+- [ ] Set services to fetch JSON files from S3
 
 ## Generated NG sections ##
 

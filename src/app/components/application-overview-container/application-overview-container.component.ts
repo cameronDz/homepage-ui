@@ -85,7 +85,7 @@ export class ApplicationOverviewContainerComponent implements OnDestroy, OnInit 
     SubscriptionUtility.unsubscribe(this.logNotesApplicationInformationDataSubscription);
     this.logNotesApplicationInformationDataSubscription = this.applicationOverviewService.retrieveApplicationInformation(
       this,
-      new DataOptions(null, ApplicationName.LOG_NOTES),
+      new DataOptions(null, ApplicationName.ARTICLE_NOTES),
       this.successfulLogNotesApplicationInformationCallback,
       this.errorLogNotesApplicationInformationCallback,
       this.completedLogNotesApplicationInformationCallback);
@@ -103,7 +103,7 @@ export class ApplicationOverviewContainerComponent implements OnDestroy, OnInit 
     SubscriptionUtility.unsubscribe(this.logNotesApplicationBulletPointsDataSubscription);
     this.logNotesApplicationBulletPointsDataSubscription = this.bulletPointService.getBulletPoints(
       this,
-      new DataOptions(BulletPointType.LOG_NOTES_APP),
+      new DataOptions(BulletPointType.ARTICLE_NOTES_APP),
       this.successfulLogNotesApplicationBulletsCallback,
       this.errorAugmentedLogNotesApplicationBulletsCallback,
       this.completedLogNotesApplicationBulletsCallback);

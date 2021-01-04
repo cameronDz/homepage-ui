@@ -4,7 +4,7 @@ import { Subscription } from 'rxjs';
 import { BulletPointModel, BulletPointType } from '../models/bullet-point.model';
 import * as _overviewBullets from '../../assets/data/overviewBullets.json';
 import * as _augmentedApplicationBullets from '../../assets/data/augmentedApplicationBullets.json';
-import * as _logNotesApplicationBullets from '../../assets/data/logNotesApplicationBullets.json';
+import * as _articleNotesApplicationBullets from '../../assets/data/articleNotesApplicationBullets.json';
 import { DataOptions } from '../models/data-options.model';
 
 @Injectable({ providedIn: 'root' })
@@ -23,8 +23,8 @@ export class BulletPointService {
   public getBulletPoints(self: any, options: DataOptions, successCallback: any, errorCallback: any, completedCallback: any): Subscription {
     if (options && options.bulletPointSegment === BulletPointType.AUGMENTED_APP && this.isValidPayload(_augmentedApplicationBullets)) {
       successCallback(self, _augmentedApplicationBullets.payload.bullets);
-    } else if (options && options.bulletPointSegment === BulletPointType.LOG_NOTES_APP && this.isValidPayload(_logNotesApplicationBullets)) {
-      successCallback(self, _logNotesApplicationBullets.payload.bullets);
+    } else if (options && options.bulletPointSegment === BulletPointType.ARTICLE_NOTES_APP && this.isValidPayload(_articleNotesApplicationBullets)) {
+      successCallback(self, _articleNotesApplicationBullets.payload.bullets);
     } else if (options && options.bulletPointSegment === BulletPointType.OVERVIEW && this.isValidPayload(_overviewBullets)) {
       successCallback(self, _overviewBullets.payload.bullets);
     } else {
@@ -52,8 +52,8 @@ export class BulletPointService {
 
   public getLogNotesApplicationBulletPoints(): Array<BulletPointModel> {
     let array: Array<BulletPointModel> = [];
-    if (this.isValidPayload(_logNotesApplicationBullets)) {
-      array = _logNotesApplicationBullets.payload.bullets;
+    if (this.isValidPayload(_articleNotesApplicationBullets)) {
+      array = _articleNotesApplicationBullets.payload.bullets;
     }
     return array;
   }

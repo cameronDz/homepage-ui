@@ -25,6 +25,6 @@ export enum ApplicationOverviewText {
 
 export enum ApplicationName {
   AUGMENTED = 'augmented',
-  LOG_NOTES = 'logNotes',
+  ARTICLE_NOTES = 'articleNotes',
   N_A = ''
 }

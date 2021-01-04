@@ -27,5 +27,5 @@ export enum BulletPointType {
   'N_A' = 0,
   'OVERVIEW' = 1,
   'AUGMENTED_APP' = 2,
-  'LOG_NOTES_APP' = 3
+  'ARTICLE_NOTES_APP' = 3
 }

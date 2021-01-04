@@ -13,8 +13,8 @@ export class ApplicationOverviewService {
   public retrieveApplicationInformation(self: any, options: DataOptions, successCallback: any, errorCallback: any, completedCallback: any): Subscription {
     if (!!options && options.applicationName === ApplicationName.AUGMENTED) {
       successCallback(self, this.getApplicationInformation(ApplicationName.AUGMENTED));
-    } else if (!!options && options.applicationName === ApplicationName.LOG_NOTES) {
-      successCallback(self, this.getApplicationInformation(ApplicationName.LOG_NOTES));
+    } else if (!!options && options.applicationName === ApplicationName.ARTICLE_NOTES) {
+      successCallback(self, this.getApplicationInformation(ApplicationName.ARTICLE_NOTES));
     } else {
       errorCallback(self, 'INVALID-OPTIONS');
     }
@@ -27,7 +27,7 @@ export class ApplicationOverviewService {
   }
 
   public getLogNotesApplicationInformation(): ApplicationOverviewModel {
-    return this.getApplicationInformation(ApplicationName.LOG_NOTES);
+    return this.getApplicationInformation(ApplicationName.ARTICLE_NOTES);
   }
 
   private getApplicationInformation(applicationName: ApplicationName): ApplicationOverviewModel {
