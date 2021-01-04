@@ -2,7 +2,7 @@ import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/cor
 import { BulletPointModel } from '../../models/bullet-point.model';
 
 @Component({
-  selector: 'md-bullets-container',
+  selector: 'nssd-bullets-container',
   templateUrl: './bullets-container.component.html'
 })
 export class BulletsContainerComponent implements OnChanges, OnInit {

@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { TextState } from '../../../models/styles.enum';
 
 @Component({
-  selector: 'md-application-header',
+  selector: 'nssd-application-header',
   templateUrl: './application-header.component.html',
   styleUrls: ['./application-header.component.scss']
 })

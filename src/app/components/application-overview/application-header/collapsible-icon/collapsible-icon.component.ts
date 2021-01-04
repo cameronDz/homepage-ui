@@ -4,7 +4,7 @@ import { TextState } from '../../../../models/styles.enum';
 import { ApplicationOverviewText } from '../../../../models/application-overview.model';
 
 @Component({
-  selector: 'md-collapsible-icon',
+  selector: 'nssd-collapsible-icon',
   templateUrl: './collapsible-icon.component.html',
   styleUrls: ['./collapsible-icon.component.scss'],
   animations: [

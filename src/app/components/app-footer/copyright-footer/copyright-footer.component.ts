@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'md-copyright-footer',
+  selector: 'nssd-copyright-footer',
   templateUrl: './copyright-footer.component.html',
   styleUrls: ['./copyright-footer.component.scss']
 })

@@ -1,4 +1,4 @@
-<md-toolbar-header></md-toolbar-header>
+<nssd-toolbar-header></md-toolbar-header>
 
 <div class="content" role="main">
     <div class="card highlight-card card-small jumbotron">
@@ -6,8 +6,8 @@
         <h3 *ngIf="subtitle" tabindex="0">{{subtitle}}</h3>
     </div>
 
-    <md-bullets-container *ngIf="showBullets"[points]="overviewBullets"></md-bullets-container>
-    <md-application-overview-container></md-application-overview-container>
+    <nssd-bullets-container *ngIf="showBullets"[points]="overviewBullets"></md-bullets-container>
+    <nssd-application-overview-container></md-application-overview-container>
 
-    <md-app-footer></md-app-footer>
+    <nssd-app-footer></md-app-footer>
 </div>

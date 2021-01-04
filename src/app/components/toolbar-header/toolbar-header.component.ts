@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'md-toolbar-header',
+  selector: 'nssd-toolbar-header',
   templateUrl: './toolbar-header.component.html',
   styleUrls: ['./toolbar-header.component.scss']
 })

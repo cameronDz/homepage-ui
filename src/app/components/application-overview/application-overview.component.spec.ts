@@ -12,7 +12,7 @@ import { BulletPointComponent } from '../bullets-container/bullet-point/bullet-p
 
 @Component({ template:
   `<div *ngIf="showComponent">
-    <md-application-overview
+    <nssd-application-overview
       [title]="title"
       [deployedUrl]="deployedUrl"
       [overviewParagraphs]="stringArray"

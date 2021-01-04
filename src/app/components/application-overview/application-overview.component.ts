@@ -5,7 +5,7 @@ import { TextState } from '../../models/styles.enum';
 import { ApplicationOverviewText } from '../../models/application-overview.model';
 
 @Component({
-  selector: 'md-application-overview',
+  selector: 'nssd-application-overview',
   templateUrl: './application-overview.component.html',
   styleUrls: ['./application-overview.component.scss'],
   animations: [

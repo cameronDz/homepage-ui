@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'md-right-arrow-svg',
+  selector: 'nssd-right-arrow-svg',
   templateUrl: './right-arrow-svg.component.html',
   styleUrls: ['./right-arrow-svg.component.scss']
 })

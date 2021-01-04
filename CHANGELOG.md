@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Application naming to homepage
 - Log note application details and updated name
+- Element tag prefix from md to nssd
 
 ### Fixed
 - Security issue with "ini" package

@@ -1,7 +1,7 @@
 <h2 *ngIf="APPLICATIONS_HEADER" class="applications-header" tabindex="0">{{APPLICATIONS_HEADER}}</h2>
 
 <div class="application-overview-element-container">
-    <md-application-overview *ngIf="augmentedOverviewModel"
+    <nssd-application-overview *ngIf="augmentedOverviewModel"
         [deployedUrl]="augmentedOverviewModel.deployedUrl"
         [overviewParagraphs]="augmentedOverviewModel.overviewParagraphs"
         [technologyParagraphs]="augmentedOverviewModel.technologyParagraphs"
@@ -11,7 +11,7 @@
 </div>
 
 <div class="application-overview-element-container">
-    <md-application-overview *ngIf="logNotesOverviewModel"
+    <nssd-application-overview *ngIf="logNotesOverviewModel"
         [deployedUrl]="logNotesOverviewModel.deployedUrl"
         [overviewParagraphs]="logNotesOverviewModel.overviewParagraphs"
         [technologyParagraphs]="logNotesOverviewModel.technologyParagraphs"

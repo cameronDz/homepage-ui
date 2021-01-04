@@ -1,5 +1,5 @@
 <div class="application-overview-container">
-    <md-application-header
+    <nssd-application-header
         [textState]="textState"
         [title]="title"
         (clickedToExpand)="handleClickedToExpanded($event)">
@@ -33,7 +33,7 @@
                 </p>
                 <ng-container *ngFor="let bullet of technologyBullets">
                     <div *ngIf="bullet" class="bullet-point-container">
-                        <md-bullet-point
+                        <nssd-bullet-point
                             [iconHref]="bullet.iconHref"
                             [iconHrefTargetBlank]="bullet.iconHrefTargetBlank"
                             [iconSrc]="bullet.iconSrc"

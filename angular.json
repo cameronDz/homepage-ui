@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "md-landing-app": {
+    "homepage-ui": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -12,12 +12,12 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "md",
+      "prefix": "nssd",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/md-landing-app",
+            "outputPath": "dist/homepage-ui",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "md-landing-app:build"
+            "browserTarget": "homepage-ui:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "md-landing-app:build:production"
+              "browserTarget": "homepage-ui:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "md-landing-app:build"
+            "browserTarget": "homepage-ui:build"
           }
         },
         "test": {
@@ -111,5 +111,5 @@
         }
       }
     }},
-  "defaultProject": "md-landing-app"
+  "defaultProject": "homepage-ui"
 }

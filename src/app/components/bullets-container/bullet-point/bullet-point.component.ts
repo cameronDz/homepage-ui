@@ -5,7 +5,7 @@ enum InputProperty {
 }
 
 @Component({
-  selector: 'md-bullet-point',
+  selector: 'nssd-bullet-point',
   templateUrl: './bullet-point.component.html',
   styleUrls: ['./bullet-point.component.scss']
 })

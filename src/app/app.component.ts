@@ -7,7 +7,7 @@ import { DataOptions } from './models/data-options.model';
 import { SubscriptionUtility } from './utilities/subscription.utility';
 
 @Component({
-  selector: 'md-root',
+  selector: 'nssd-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })

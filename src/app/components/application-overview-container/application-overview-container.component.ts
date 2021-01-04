@@ -10,7 +10,7 @@ import { BulletPointModel, BulletPointType } from '../../models/bullet-point.mod
 import { DataOptions } from '../../models/data-options.model';
 
 @Component({
-  selector: 'md-application-overview-container',
+  selector: 'nssd-application-overview-container',
   templateUrl: './application-overview-container.component.html',
   styleUrls: ['./application-overview-container.component.scss']
 })
