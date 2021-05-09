@@ -39,6 +39,7 @@
     "typescript": "~3.7.5",
     "webpack-subresource-integrity": ">=1.5.1",
     "websocket-extensions": "^0.1.4",
+    "ua-parser-js": ">=0.7.24",
     "zone.js": "~0.10.2"
   },
   "homepage": "https://www.camdziurgot.io/",
