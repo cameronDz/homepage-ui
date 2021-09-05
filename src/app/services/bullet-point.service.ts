@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 import { Subscription } from 'rxjs';
 
 import { BulletPointModel, BulletPointType } from '../models/bullet-point.model';
-import * as _overviewBullets from '../../assets/data/overviewBullets.json';
-import * as _augmentedApplicationBullets from '../../assets/data/augmentedApplicationBullets.json';
-import * as _articleNotesApplicationBullets from '../../assets/data/articleNotesApplicationBullets.json';
+import _overviewBullets from '../../assets/data/overviewBullets.json';
+import _augmentedApplicationBullets from '../../assets/data/augmentedApplicationBullets.json';
+import _articleNotesApplicationBullets from '../../assets/data/articleNotesApplicationBullets.json';
 import { DataOptions } from '../models/data-options.model';
 
 @Injectable({ providedIn: 'root' })
@@ -59,6 +59,6 @@ export class BulletPointService {
   }
 
   private isValidPayload(root: any): boolean {
-    return root && root.default && root.default.payload && Array.isArray(root.default.payload.bullets);
+    return Array.isArray(root?.payload?.bullets);
   }
 }
