@@ -21,14 +21,14 @@
     "directive-selector": [
       true,
       "attribute",
-      "md",
+      "nssd",
       "camelCase"
     ],
     "eofline": true,
     "component-selector": [
       true,
       "element",
-      "md",
+      "nssd",
       "kebab-case"
     ],
     "import-spacing": true,
