@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { CollapsibleIconComponent } from './collapsible-icon.component';
@@ -7,7 +7,7 @@ describe('CollapsibleIconComponent', () => {
   let component: CollapsibleIconComponent;
   let fixture: ComponentFixture<CollapsibleIconComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ CollapsibleIconComponent ],
       imports: [ BrowserAnimationsModule ]

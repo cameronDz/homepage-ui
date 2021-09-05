@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed, TestModuleMetadata } from '@angular/core/testing';
+import { ComponentFixture, TestBed, TestModuleMetadata, waitForAsync } from '@angular/core/testing';
 
 import { ApplicationOverviewContainerComponent } from './application-overview-container.component';
 import { ApplicationOverviewComponent } from '../application-overview/application-overview.component';
@@ -21,7 +21,7 @@ describe('ApplicationOverviewContainerComponent', () => {
     imports: [ BrowserAnimationsModule ]
   };
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule(testConfig).compileComponents();
   }));
 

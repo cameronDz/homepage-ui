@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.0] - 2021-09-04
+
+### Changed
+- Updated Angular framework from v9 to v12
+
+### Fixed
+- Security vulnerabilites from Github and npm audit
+- JSON import modules issue
+
 ## [1.2.0] - 2021-01-04
 ### Added
 - Server configuration documentation

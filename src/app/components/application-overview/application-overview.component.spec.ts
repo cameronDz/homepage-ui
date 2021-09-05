@@ -1,7 +1,7 @@
 
 import { Component } from '@angular/core';
 import { By } from '@angular/platform-browser';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ApplicationOverviewComponent } from './application-overview.component';
@@ -45,7 +45,7 @@ describe('ApplicationOverviewComponent', () => {
     imports: [ BrowserAnimationsModule ]
   };
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule(testConfig).compileComponents();
   }));
 

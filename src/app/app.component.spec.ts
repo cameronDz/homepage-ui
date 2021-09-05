@@ -1,4 +1,4 @@
-import { async, TestBed, TestModuleMetadata } from '@angular/core/testing';
+import { TestBed, TestModuleMetadata, waitForAsync } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { ResourceCardsComponent } from './components/resource-cards/resource-cards.component';
@@ -32,7 +32,7 @@ describe('AppComponent', () => {
     imports: [ BrowserAnimationsModule ]
   };
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule(config).compileComponents();
   }));
 

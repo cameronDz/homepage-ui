@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { ResourceCardsComponent } from './resource-cards.component';
 import { RightArrowSvgComponent } from './right-arrow-svg/right-arrow-svg.component';
@@ -13,7 +13,7 @@ describe('ResourceCardsComponent', () => {
     ]
   };
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule(testConfig).compileComponents();
   }));
 

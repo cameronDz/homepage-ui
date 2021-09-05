@@ -3,7 +3,7 @@ import { Subscription } from 'rxjs';
 
 import { ApplicationName, ApplicationOverviewModel } from '../models/application-overview.model';
 import { DataOptions } from '../models/data-options.model';
-import * as _applicationOverviews from '../../assets/data/applicationOverviews.json';
+import _applicationOverviews from '../../assets/data/applicationOverviews.json';
 
 @Injectable({ providedIn: 'root' })
 export class ApplicationOverviewService {
@@ -39,6 +39,6 @@ export class ApplicationOverviewService {
   }
 
   private hasApplicationModel(root: any, applicationName: ApplicationName): boolean {
-    return root && root.default && root.default.payload && root.default.payload[applicationName];
+    return root?.payload && root.payload[applicationName];
   }
 }

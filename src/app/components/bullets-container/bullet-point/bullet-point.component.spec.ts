@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed, TestModuleMetadata } from '@angular/core/testing';
+import { ComponentFixture, TestBed, TestModuleMetadata, waitForAsync } from '@angular/core/testing';
 
 import { BulletPointComponent } from './bullet-point.component';
 
@@ -9,7 +9,7 @@ describe('BulletPointComponent', () => {
     declarations: [ BulletPointComponent ]
   };
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule(testConfig).compileComponents();
   }));
 
