@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { CloudFooterComponent } from './cloud-footer.component';
 
@@ -6,7 +6,7 @@ describe('CloudFooterComponent', () => {
   let component: CloudFooterComponent;
   let fixture: ComponentFixture<CloudFooterComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({ declarations: [ CloudFooterComponent ] }).compileComponents();
   }));
 

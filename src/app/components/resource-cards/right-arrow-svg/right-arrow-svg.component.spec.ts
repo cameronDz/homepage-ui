@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { RightArrowSvgComponent } from './right-arrow-svg.component';
 
@@ -6,7 +6,7 @@ describe('RightArrowSvgComponent', () => {
   let component: RightArrowSvgComponent;
   let fixture: ComponentFixture<RightArrowSvgComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ RightArrowSvgComponent ]
     })
