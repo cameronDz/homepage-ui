@@ -1,7 +1,7 @@
 {
   "payload": {
     "augmented": {
-      "deployedUrl": "http://www.augmented.fit",
+      "deployedUrl": "https://camdziurgot.io/augmented/",
       "overviewParagraphs": [
         "Augmented is a personal fitness application used to track fitness and nutrition. The end goal for augmented is to have user base (other than myself) use the application to record exercises routines, sleep schedules, meals, etc., connect wearable and smart devices to the application, and access other fitness and diet tracking applications, to have one place to collect all self tracking data. Currently, the application is only used to track cardio workouts."
       ],
