@@ -5,6 +5,7 @@ import { BulletPointModel, BulletPointType } from './models/bullet-point.model';
 import { BulletPointService } from './services/bullet-point.service';
 import { DataOptions } from './models/data-options.model';
 import { SubscriptionUtility } from './utilities/subscription.utility';
+import { ApplicationOverviewModel } from './models/application-overview.model';
 
 @Component({
   selector: 'nssd-root',
@@ -12,13 +13,12 @@ import { SubscriptionUtility } from './utilities/subscription.utility';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnDestroy, OnInit {
-
-  public title: string = 'Cam Dziurgot';
-  public subtitle: string = 'Software Engineer and DevOps enthusiast. Interests include; America, suits, coffee, and dogs.';
-
   public isLoading = false;
-  public showBullets: boolean = false;
+
+  public deployedApplications: Array<ApplicationOverviewModel> = [];
   public overviewBullets: Array<BulletPointModel> = [];
+  public subtitle: string = 'Software Engineer and DevOps enthusiast. Interests include; America, suits, coffee, and dogs.';
+  public title: string = 'Cam Dziurgot';
 
   private overviewBulletsSubscription: Subscription = null;
 
@@ -34,7 +34,6 @@ export class AppComponent implements OnDestroy, OnInit {
 
   private getOverviewBulletPoints(): void {
     SubscriptionUtility.unsubscribe(this.overviewBulletsSubscription);
-    this.isLoading = true;
     this.overviewBulletsSubscription = this.bulletPointService.getBulletPoints(
       this,
       new DataOptions(BulletPointType.OVERVIEW),
@@ -47,12 +46,7 @@ export class AppComponent implements OnDestroy, OnInit {
     self.overviewBullets = data;
   }
 
-  private overviewBulletsErrorCallback(self: AppComponent, error: any): void {
-    /* used when implementing error handling */
-  }
-
-  private overviewBulletsCompletedCallback(self: AppComponent): void {
-    self.isLoading = false;
-    self.showBullets = !!self.overviewBullets && !!self.overviewBullets.length;
-  }
+  /* used when implementing error handling is loading */
+  private overviewBulletsErrorCallback(self: AppComponent, error: any): void {}
+  private overviewBulletsCompletedCallback(self: AppComponent): void {}
 }
