@@ -1,9 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 
-import { BulletPointModel, BulletPointType } from './models/bullet-point.model';
-import { BulletPointService } from './services/bullet-point.service';
-import { DataOptions } from './models/data-options.model';
+import { BulletPointModel } from './models/bullet-point.model';
+import { ApplicationOverviewService } from "./services/application-overview.service";
 import { SubscriptionUtility } from './utilities/subscription.utility';
 import { ApplicationOverviewModel } from './models/application-overview.model';
 
@@ -17,36 +16,43 @@ export class AppComponent implements OnDestroy, OnInit {
 
   public deployedApplications: Array<ApplicationOverviewModel> = [];
   public overviewBullets: Array<BulletPointModel> = [];
-  public subtitle: string = 'Software Engineer and DevOps enthusiast. Interests include; America, suits, coffee, and dogs.';
-  public title: string = 'Cam Dziurgot';
+  public subtitle: string = '';
+  public title: string = '';
 
-  private overviewBulletsSubscription: Subscription = null;
+  private applicationOverviewSubscription: Subscription = null;
 
-  constructor(private bulletPointService: BulletPointService) {}
+  constructor(private applicationOverviewService: ApplicationOverviewService) {}
 
   ngOnInit(): void {
-    this.getOverviewBulletPoints();
+    this.getApplicationOverviewData();
   }
 
   ngOnDestroy(): void {
-    SubscriptionUtility.unsubscribe(this.overviewBulletsSubscription);
+    SubscriptionUtility.unsubscribe(this.applicationOverviewSubscription);
   }
 
-  private getOverviewBulletPoints(): void {
-    SubscriptionUtility.unsubscribe(this.overviewBulletsSubscription);
-    this.overviewBulletsSubscription = this.bulletPointService.getBulletPoints(
+  private getApplicationOverviewData(): void {
+    SubscriptionUtility.unsubscribe(this.applicationOverviewSubscription);
+    this.isLoading = true;
+    this.applicationOverviewSubscription = this.applicationOverviewService.retrieveAllApplicationData(
       this,
-      new DataOptions(BulletPointType.OVERVIEW),
-      this.overviewBulletsSuccessCallback,
-      this.overviewBulletsErrorCallback,
-      this.overviewBulletsCompletedCallback);
+      this.callbackApplicationOverviewSuccess,
+      this.callbackApplicationOverviewError,
+      this.callbackApplicationOverviewCompleted);
   }
 
-  private overviewBulletsSuccessCallback(self: AppComponent, data: Array<BulletPointModel>): void {
-    self.overviewBullets = data;
+  private callbackApplicationOverviewSuccess(self: AppComponent, data: any): void {
+    self.deployedApplications = data?.payload?.deployedApplications || [];
+    self.overviewBullets = data?.payload?.overviewBullets || [];
+    self.subtitle = data?.payload?.subtitle || '';
+    self.title = data?.payload?.title || '';
   }
 
-  /* used when implementing error handling is loading */
-  private overviewBulletsErrorCallback(self: AppComponent, error: any): void {}
-  private overviewBulletsCompletedCallback(self: AppComponent): void {}
+  private callbackApplicationOverviewError(self: AppComponent, error: any): void {
+    /* TODO set up error handling */
+  }
+
+  private callbackApplicationOverviewCompleted(self: AppComponent): void {
+    self.isLoading = false;
+  }
 }
