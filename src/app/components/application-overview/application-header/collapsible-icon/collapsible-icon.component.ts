@@ -21,7 +21,7 @@ export class CollapsibleIconComponent implements OnChanges, OnInit {
   private readonly COLLAPSE_TEXT: string = ApplicationOverviewText.CLICK_TO_COLLAPSE_TEXT;
   private readonly EXPAND_TEXT: string = ApplicationOverviewText.CLICK_TO_EXPAND_TEXT;
 
-  public readonly IMAGE_SRC: string = 'assets/images/black-expand-triangle.png';
+  public readonly IMAGE_SRC: string = 'https://storage-assets-homepage.s3.amazonaws.com/black-expand-triangle.png';
 
   @Input() textState: TextState = TextState.EXPANDED;
   @Output() clickedToExpand: EventEmitter<TextState> = new EventEmitter<TextState>();
