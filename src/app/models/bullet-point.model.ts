@@ -21,6 +21,15 @@ export class BulletPointModel {
     }
     return copy;
   }
+
+  public static clones(originals: Array<BulletPointModel>): Array<BulletPointModel> {
+    const copies: Array<BulletPointModel> = [];
+    const length = originals?.length || 0;
+    for (let idx = 0; idx < length; idx++) {
+      copies.push(BulletPointModel.clone(originals[idx]));
+    }
+    return copies;
+  }
 }
 
 export enum BulletPointType {
