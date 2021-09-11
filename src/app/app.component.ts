@@ -14,7 +14,7 @@ import { ApplicationOverviewModel } from './models/application-overview.model';
 export class AppComponent implements OnDestroy, OnInit {
   public isLoading = false;
 
-  public deployedApplications: Array<ApplicationOverviewModel> = [];
+  public applications: Array<ApplicationOverviewModel> = [];
   public overviewBullets: Array<BulletPointModel> = [];
   public subtitle: string = '';
   public title: string = '';
@@ -42,7 +42,7 @@ export class AppComponent implements OnDestroy, OnInit {
   }
 
   private callbackApplicationOverviewSuccess(self: AppComponent, data: any): void {
-    self.deployedApplications = data?.payload?.deployedApplications || [];
+    self.applications = data?.payload?.deployedApplications || [];
     self.overviewBullets = data?.payload?.overviewBullets || [];
     self.subtitle = data?.payload?.subtitle || '';
     self.title = data?.payload?.title || '';
