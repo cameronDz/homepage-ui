@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Added HTTP service for fetching JSON data from heroku service
+
 ### Changed
 
 - Source of images moved to S3 instead of on relative route
