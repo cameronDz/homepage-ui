@@ -20,6 +20,7 @@ import { CloudFooterComponent } from './components/app-footer/cloud-footer/cloud
 import { CopyrightFooterComponent } from './components/app-footer/copyright-footer/copyright-footer.component';
 import { CollapsibleIconComponent } from './components/application-overview/application-header/collapsible-icon/collapsible-icon.component';
 import { ApplicationHeaderComponent } from './components/application-overview/application-header/application-header.component';
+import { LoadIndicatorComponent } from './components/load-indicator/load-indicator.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { ApplicationHeaderComponent } from './components/application-overview/ap
     RightArrowSvgComponent,
     ToolbarHeaderComponent,
     CollapsibleIconComponent,
-    ApplicationHeaderComponent
+    ApplicationHeaderComponent,
+    LoadIndicatorComponent
   ],
   imports: [
     BrowserAnimationsModule,
