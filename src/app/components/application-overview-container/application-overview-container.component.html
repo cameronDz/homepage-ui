@@ -1,22 +1,12 @@
-<h2 *ngIf="APPLICATIONS_HEADER" class="applications-header" tabindex="0">{{APPLICATIONS_HEADER}}</h2>
+<h2 *ngIf="title" class="applications-header" tabindex="0">{{title}}</h2>
 
-<div class="application-overview-element-container">
-    <nssd-application-overview *ngIf="augmentedOverviewModel"
-        [deployedUrl]="augmentedOverviewModel.deployedUrl"
-        [overviewParagraphs]="augmentedOverviewModel.overviewParagraphs"
-        [technologyParagraphs]="augmentedOverviewModel.technologyParagraphs"
-        [title]="augmentedOverviewModel.title"
-        [technologyBullets]="augmentedTechnologyBullets">
-    </nssd-application-overview>
-</div>
-
-<div class="application-overview-element-container">
-    <nssd-application-overview *ngIf="logNotesOverviewModel"
-        [deployedUrl]="logNotesOverviewModel.deployedUrl"
-        [overviewParagraphs]="logNotesOverviewModel.overviewParagraphs"
-        [technologyParagraphs]="logNotesOverviewModel.technologyParagraphs"
-        [title]="logNotesOverviewModel.title"
-        [technologyBullets]="logNotesTechnologyBullets"
+<ng-container *ngFor="let app of applications">
+    <nssd-application-overview *ngIf="!!app"
+        [deployedUrl]="app.deployedUrl"
+        [overviewParagraphs]="app.overviewParagraphs"
+        [technologyParagraphs]="app.technologyParagraphs"
+        [title]="app.title"
+        [technologyBullets]="app.bullets"
     >
     </nssd-application-overview>
-</div>
+</ng-container>
