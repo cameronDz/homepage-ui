@@ -9,7 +9,7 @@
         "The front end of the application is a SPA using ReactJS, with a combination of Bulma and Material UI styling frameworks. Keeps code quality standards using ES Lint, compiled using Webpack, and tested using Mocha framework. The UI is deployed to an AWS S3 bucket, which statically hosts the applcation. GoDaddy is used to forward mask any user that navigates to the S3 bucket address.",
         "The back end of the applcation is written in .NET framework, using C# to write the API to perform basic CRUD functions against a database generated using Entity Framework. The API and the database are deployed manually on Azure using Visual Studio."
       ],
-      "title": "Augmented"
+      "title": "Augmented UI"
     },
     "articleNotes": {
       "deployedUrl": "https://camdziurgot.io/article-notes/",

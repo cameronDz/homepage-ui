@@ -2,32 +2,18 @@
   "payload": {
     "bullets": [
       {
-        "iconHref": "https://github.com/cameronDz/augmented-front-end",
+        "iconHref": "https://github.com/cameronDz/augmented-ui",
         "iconHrefTargetBlank": true,
-        "iconSrc": "assets/images/react.png",
+        "iconSrc": "https://storage-assets-homepage.s3.amazonaws.com/react.png",
         "iconTitle": "ReactJS",
         "message": "View repository for frontend React UI project on GitHub."
       },
       {
-        "iconHref": "http://augmented-frontend.s3-website-us-east-1.amazonaws.com/",
+        "iconHref": "https://www.camdziurgot.io/augmented/",
         "iconHrefTargetBlank": true,
-        "iconSrc": "assets/images/aws-s3.png",
-        "iconTitle": "AWS S3",
-        "message": "Visit S3 bucket directly used to statically host webpage."
-      },
-      {
-        "iconHref": "https://github.com/cameronDz/augmented-aspnet-backend",
-        "iconHrefTargetBlank": true,
-        "iconSrc": "assets/images/dot-net.png",
-        "iconTitle": "ASP.NET",
-        "message": "View repository for backend .NET project on GitHub."
-      },
-      {
-        "iconHref": "https://augmentedaspnetbackend.azurewebsites.net/",
-        "iconHrefTargetBlank": true,
-        "iconSrc": "assets/images/azure.png",
-        "iconTitle": "Azure Cloud",
-        "message": "Backend documentation deployed on Azure with API's and Database server."
+        "iconSrc": "https://storage-assets-homepage.s3.amazonaws.com/aws-s3.png",
+        "iconTitle": "AWS EC2",
+        "message": "Visit AWS EC2 server hosting webpage."
       }
     ]
   }
