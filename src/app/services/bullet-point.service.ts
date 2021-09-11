@@ -20,7 +20,12 @@ export class BulletPointService {
    * @param errorCallback -
    * @param completedCallback -
    */
-  public getBulletPoints(self: any, options: DataOptions, successCallback: any, errorCallback: any, completedCallback: any): Subscription {
+  public getBulletPoints(
+      self: any,
+      options: DataOptions,
+      successCallback: any,
+      errorCallback: any,
+      completedCallback: any): Subscription {
     if (options && options.bulletPointSegment === BulletPointType.AUGMENTED_APP && this.isValidPayload(_augmentedApplicationBullets)) {
       successCallback(self, _augmentedApplicationBullets.payload.bullets);
     } else if (options && options.bulletPointSegment === BulletPointType.ARTICLE_NOTES_APP && this.isValidPayload(_articleNotesApplicationBullets)) {
