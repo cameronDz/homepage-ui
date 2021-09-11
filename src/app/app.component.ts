@@ -16,6 +16,7 @@ export class AppComponent implements OnDestroy, OnInit {
   public title: string = 'Cam Dziurgot';
   public subtitle: string = 'Software Engineer and DevOps enthusiast. Interests include; America, suits, coffee, and dogs.';
 
+  public isLoading = false;
   public showBullets: boolean = false;
   public overviewBullets: Array<BulletPointModel> = [];
 
@@ -24,6 +25,16 @@ export class AppComponent implements OnDestroy, OnInit {
   constructor(private bulletPointService: BulletPointService) {}
 
   ngOnInit(): void {
+    this.getOverviewBulletPoints();
+  }
+
+  ngOnDestroy(): void {
+    SubscriptionUtility.unsubscribe(this.overviewBulletsSubscription);
+  }
+
+  private getOverviewBulletPoints(): void {
+    SubscriptionUtility.unsubscribe(this.overviewBulletsSubscription);
+    this.isLoading = true;
     this.overviewBulletsSubscription = this.bulletPointService.getBulletPoints(
       this,
       new DataOptions(BulletPointType.OVERVIEW),
@@ -32,16 +43,16 @@ export class AppComponent implements OnDestroy, OnInit {
       this.overviewBulletsCompletedCallback);
   }
 
-  ngOnDestroy(): void {
-    SubscriptionUtility.unsubscribe(this.overviewBulletsSubscription);
-  }
-
   private overviewBulletsSuccessCallback(self: AppComponent, data: Array<BulletPointModel>): void {
     self.overviewBullets = data;
-    self.showBullets = !!self.overviewBullets && !!self.overviewBullets.length;
   }
 
-  /* used when implementing error handling and loading status */
-  private overviewBulletsErrorCallback(self: AppComponent, error: any): void {}
-  private overviewBulletsCompletedCallback(self: AppComponent): void {}
+  private overviewBulletsErrorCallback(self: AppComponent, error: any): void {
+    /* used when implementing error handling */
+  }
+
+  private overviewBulletsCompletedCallback(self: AppComponent): void {
+    self.isLoading = false;
+    self.showBullets = !!self.overviewBullets && !!self.overviewBullets.length;
+  }
 }
