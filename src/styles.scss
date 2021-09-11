@@ -7,8 +7,21 @@ h6 {
   margin: 8px 0;
 }
 
+html, body, nssd-root {
+  height: 100%;
+}
+
+body {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
 p {
   margin: 0;
+}
+
+.nssd-app-container {
+  min-height: 100%;
 }
 
 .content {
@@ -17,7 +30,7 @@ p {
   flex-direction: column;
   margin: 32px auto 0px;
   max-width: 960px;
-  padding: 0 16px;
+  padding: 0 16px 36px 16px;
 }
 
 svg.material-icons {
