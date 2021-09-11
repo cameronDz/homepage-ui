@@ -12,6 +12,10 @@ import { ApplicationOverviewModel } from './models/application-overview.model';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnDestroy, OnInit {
+  public errorHeader = 'Unable to fetch page data.';
+  public errorMessage = '';
+
+  public isError = false;
   public isLoading = false;
 
   public applications: Array<ApplicationOverviewModel> = [];
@@ -49,7 +53,8 @@ export class AppComponent implements OnDestroy, OnInit {
   }
 
   private callbackApplicationOverviewError(self: AppComponent, error: any): void {
-    /* TODO set up error handling */
+    self.isError = true;
+    self.errorMessage = error?.statusText || '';
   }
 
   private callbackApplicationOverviewCompleted(self: AppComponent): void {

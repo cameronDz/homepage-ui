@@ -2,16 +2,20 @@
     <nssd-toolbar-header></nssd-toolbar-header>
     <div class="content" role="main">
         <div class="card highlight-card card-small jumbotron">
-            <ng-container *ngIf="!isLoading">
+            <ng-container *ngIf="!isLoading && !isError">
                 <h1 *ngIf="title" tabindex="0">{{title}}</h1>
                 <h3 *ngIf="subtitle" tabindex="0">{{subtitle}}</h3>
+            </ng-container>
+            <ng-container *ngIf="!isLoading && !!isError">
+                <h2 tabindex="0">{{errorHeader}}</h2>
+                <h4 *ngIf="errorMessage" tabindex="0">{{errorMessage}}</h4>
             </ng-container>
             <ng-container *ngIf="isLoading">
                 <nssd-load-indicator></nssd-load-indicator>
             </ng-container>
         </div>
 
-        <ng-container *ngIf="!isLoading">
+        <ng-container *ngIf="!isLoading && !isError">
             <nssd-bullets-container [points]="overviewBullets"></nssd-bullets-container>
             <nssd-application-overview-container [applications]="applications"></nssd-application-overview-container>
         </ng-container>
