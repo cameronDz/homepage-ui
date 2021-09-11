@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Source of images moved to S3 instead of on relative route
+
+### Removed
+
+- Image in assets directory
+
 ## [1.3.1] - 2021-09-08
 
 ### Changed
