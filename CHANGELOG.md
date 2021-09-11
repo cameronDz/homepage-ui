@@ -14,6 +14,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Source of images moved to S3 instead of on relative route
 
+### Fixed
+
+- Set footer to be sticky as intended
+
 ### Removed
 
 - Image in assets directory
