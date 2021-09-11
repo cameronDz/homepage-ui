@@ -1,14 +1,28 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Subscription } from 'rxjs';
 
+import { HttpsRequestService } from './https-request.service';
 import { ApplicationName, ApplicationOverviewModel } from '../models/application-overview.model';
 import { DataOptions } from '../models/data-options.model';
+import { onCompleteCallback, onErrorCallback, onSuccessCallback } from "../models/types";
 import _applicationOverviews from '../../assets/data/applicationOverviews.json';
 
 @Injectable({ providedIn: 'root' })
-export class ApplicationOverviewService {
+export class ApplicationOverviewService extends HttpsRequestService {
+  private readonly ALL_DATA_SOURCE = "applicationData";
 
-  constructor() { }
+  constructor(httpClient: HttpClient) {
+    super(httpClient);
+  }
+
+  public retrieveAllApplicationData(
+      self: any,
+      successCallback: onSuccessCallback,
+      errorCallback: onErrorCallback,
+      completedCallback: onCompleteCallback): Subscription {
+    return this.getData(self, this.ALL_DATA_SOURCE, successCallback, errorCallback, completedCallback)
+  }
 
   public retrieveApplicationInformation(self: any, options: DataOptions, successCallback: any, errorCallback: any, completedCallback: any): Subscription {
     if (!!options && options.applicationName === ApplicationName.AUGMENTED) {
