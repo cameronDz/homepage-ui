@@ -6,6 +6,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.4.1] - 2021-09-11
+
+### Added
+
+- Version details in footer
+- Error message shows when API fails
+
+### Fixed
+
+- Fixed color of loader to be visible during loading
+
+## [1.4.0] - 2021-09-11
+
 ### Added
 
 - Added HTTP service for fetching JSON data from heroku service
