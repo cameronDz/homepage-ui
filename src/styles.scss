@@ -7,30 +7,8 @@ h6 {
   margin: 8px 0;
 }
 
-html, body, nssd-root {
-  height: 100%;
-}
-
-body {
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
 p {
   margin: 0;
-}
-
-.nssd-app-container {
-  min-height: 100%;
-}
-
-.content {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  margin: 32px auto 0px;
-  max-width: 960px;
-  padding: 0 16px 36px 16px;
 }
 
 svg.material-icons {
@@ -123,4 +101,32 @@ a:hover {
     height: 16px;
     margin: 8px 0;
   }
+}
+
+/* sticky footer */
+html, body, nssd-root {
+  height: 100%;
+}
+
+body {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.nssd-app-container {
+  min-height: 100%;
+}
+
+.content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 32px auto 0px;
+  max-width: 960px;
+  padding: 0 16px 36px 16px;
+}
+
+/* loader spinner color */
+svg circle {
+  stroke: white;
 }
