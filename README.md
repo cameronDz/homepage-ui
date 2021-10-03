@@ -34,9 +34,26 @@ The deployment process is currently a manual process;
         - Setup an IAM User, and under Security Credentials, create an access key and copy credentials to EC2 using ```aws configure``` command
 1. Once the transfer is done, a cache clear on a local browser can verify the changes went through with the new deploy.
 
+## Associated App Setup ##
+
+### Updating versions
+
+Script in src/assets/ directory used to pull latest app versions from S3 and deploy to server. When script is redeployed/updated, need to run `chmod 755 -x` to flag as executable. Script must be run using `sudo`. Use as a reference for updating homepage itself, store script in parent directory so not accessible via HTTP requests
+
+### Heroku Naming ###
+
+- _app-name_-**storage-api**: direct access to S3 bucket, using [s3-access-api](https://github.com/cameronDz/s3-access-api) app. needs IAM access to a single, private, S3 bucket
+- _app-name_-**access-api**: data manipulation wrapper API service. used as a wrapper to a private _storage-api_ locked behind a required token set in project configuration during deployments. 
+
+### S3 Bucket Naming ###
+
+- **artifacts**-_app-name_: versioned build artifacts from UI builds
+- **storage-data**-_app-name_: data accessed through an [s3-access-api](https://github.com/cameronDz/s3-access-api) instance. data stored as JSON file names, mock of mongo nosql db. naming schema defined per app
+- **storage-assets**-_app-name_: ui application assets, publicly assessible - typically images
+
 ## TODO ##
-- [ ] Upgrade to Angular 10.x.x
-- [ ] Set services to fetch JSON files from S3
+- [x] Upgrade to Angular 10.x.x
+- [x] Set services to fetch JSON files from S3
 
 ## Generated NG sections ##
 

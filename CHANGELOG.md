@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Shell script for server for updating other applications
+- Heroku app and S3 bucket naming and purposes for additional apps
+
 ## [1.4.1] - 2021-09-11
 
 ### Added
