@@ -60,5 +60,5 @@
     "start": "ng serve",
     "test": "ng test --watch=false --code-coverage --browsers ChromeHeadless"
   },
-  "version": "1.6.2"
+  "version": "1.6.3"
 }
