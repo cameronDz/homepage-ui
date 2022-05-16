@@ -6,6 +6,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.6.2] 2022-05-15
+
+### Fixed
+
+- [dev/meta-tag] add .png for og image tag
+
+### Security
+
+- [dependencies] run audit fix to remove vulnerable dependencies
+
 ## [1.6.1] 2022-05-15
 
 ### Fixed
