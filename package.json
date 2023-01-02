@@ -6,7 +6,7 @@
   },
   "description": "Landing page application for personal webpage.",
   "devDependencies": {
-    "@angular-devkit/build-angular": "^12.2.4",
+    "@angular-devkit/build-angular": "^15.0.4",
     "@angular/animations": "~12.2.4",
     "@angular/cdk": "^12.2.5",
     "@angular/cli": "^12.2.4",
