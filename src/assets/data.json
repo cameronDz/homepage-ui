@@ -1,0 +1,99 @@
+{
+    "deployedApplications": [
+        {
+            "bullets": [
+                {
+                    "iconHref": "https://github.com/cameronDz/augmented-ui",
+                    "iconHrefTargetBlank": true,
+                    "iconTitle": "ReactJS",
+                    "message": "View repository for frontend React UI project on GitHub."
+                },
+                {
+                    "iconHref": "https://augmented.camdziurgot.io/",
+                    "iconHrefTargetBlank": true,
+                    "iconTitle": "Augmented app",
+                    "message": "Visit application."
+                }
+            ],
+            "deployedUrl": "https://augmented.camdziurgot.io/",
+            "overviewParagraphs": [
+                "Augmented is a personal fitness application used to track fitness and nutrition. The end goal for augmented is to have user base (other than myself) use the application to record exercises routines, sleep schedules, meals, etc., connect wearable and smart devices to the application, and access other fitness and diet tracking applications, to have one place to collect all self tracking data. Currently, the application is only used to track cardio workouts."
+            ],
+            "technologyParagraphs": [
+                "The front end of the application is a Single Page Application using ReactJS, with a combination of Bulma and Material UI styling frameworks. Keeps code quality standards using ES Lint, compiled using Webpack, and tested using Mocha framework. The UI was originally deployed to an AWS S3 bucket, which statically hosts the applcation. Now it is hosted as a GitHub page. The application is hosted as a subdomin of camdziurgot.io, using Route53.",
+                "The back end of the applcation was originally written in .NET framework, using C#, but migrated to the Java Spring framework, to write the API to perform basic CRUD functions against files in an S3 bucket (this was originally a database hosted on Azure, generated using Entity Framework). The API is now hosted on Heroku."
+            ],
+            "title": "Augmented UI"
+        },
+        {
+            "bullets": [
+                {
+                    "iconHref": "https://github.com/cameronDz/s3-access-api",
+                    "iconHrefTargetBlank": true,
+                    "iconTitle": "Spring Boot",
+                    "message": "View repository for backend/middleware Spring Boot project on GitHub."
+                },
+                {
+                    "iconHref": "https://journal-notes-storage-api.herokuapp.com/swagger-ui.html#/s-3-index-controller",
+                    "iconHrefTargetBlank": true,
+                    "iconTitle": "Heroku",
+                    "message": "View deployed API application Swagger documentation on Heruko cloud."
+                },
+                {
+                    "iconHref": "https://github.com/cameronDz/journal-notes-ui",
+                    "iconHrefTargetBlank": true,
+                    "iconTitle": "ReactJS",
+                    "message": "View repository for frontend React UI project on GitHub."
+                },
+                {
+                    "iconHref": "https://notes.camdziurgot.io/",
+                    "iconHrefTargetBlank": true,
+                    "iconTitle": "Notes app",
+                    "message": "Visit application."
+                }
+            ],
+            "deployedUrl": "https://notes.camdziurgot.io/",
+            "overviewParagraphs": [
+                "The Journal-Notes UI application is an application meant for creating, accessing, and organizing various notes or journal entries for articles and other material read by a user. The primary purpose of the deployed application now is to create notes from Medium.com articles to use for references in future articles and white papers on technology. Eventually, the application will evolve to support multiple types of notes by using multiple types of forms."
+            ],
+            "technologyParagraphs": [
+                "The frontend is a ReactJS SPA that uses Material UI for styling, ES Lint with Mocha for code quality and unit testing, and Webpack for bundling the application. It previously had manual deploys to a statically hosted AWS S3 bucket using a combination of an NPM script in the project and AWS CLI. Now it is hosted on Git Hub pages",
+                "The backend of the application is made using a Java Spring Boot framework built with Apache Maven. The API is used to perform basic CRUD functionality with JSON objects in an S3 bucket (seperate from the statically hosted bucket), that requires authentication for any functionality besides retrieval.",
+                "The API is deployed to a Heroku cloud server in a fully automated pipeline that runs anytime the a commit is made to the master branch of the applications GitHub repository."
+            ],
+            "title": "Journal-Notes UI"
+        }
+    ],
+    "overviewBullets": [
+        {
+            "iconHref": "https://github.com/cameronDz",
+            "iconHrefTargetBlank": true,
+            "iconSrc": "/assets/images/icons/github.png",
+            "iconTitle": "Visit GitHub Homepage",
+            "message": "Project repositories for personal application located on GitHub."
+        },
+        {
+            "iconHref": "https://drive.google.com/file/d/1Pf26a83PUserZpvkLzDWjf4JIjeVvg2n/view?usp=sharing",
+            "iconHrefTargetBlank": true,
+            "iconSrc": "/assets/images/icons/resume.png",
+            "iconTitle": "Open Resume PDF",
+            "message": "Resume with work experience, skill sets, and education, stored on Google Drive."
+        },
+        {
+            "iconHref": "https://www.linkedin.com/in/cameron-dziurgot-955280108/",
+            "iconHrefTargetBlank": true,
+            "iconSrc": "/assets/images/icons/linkedin.png",
+            "iconTitle": "Visit LinkedIn Profile",
+            "message": "LinkedIn social media profile."
+        },
+        {
+            "iconHref": "https://camdziurgot.medium.com/",
+            "iconHrefTargetBlank": true,
+            "iconSrc": "/assets/images/icons/medium.png",
+            "iconTitle": "Visit Medium Homepage",
+            "message": "Articles written on Medium publications on various technology and development topics."
+        }
+    ],
+    "subtitle": "Software Engineer and DevOps enthusiast. Interests include; America, suits, coffee, and dogs.",
+    "title": "Cam Dziurgot"
+}

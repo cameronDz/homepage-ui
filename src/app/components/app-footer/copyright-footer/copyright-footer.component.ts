@@ -1,14 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import _packageDetails from "../../../../../package.json";
+import { CommonModule } from '@angular/common';
+
 @Component({
+  imports: [CommonModule],
   selector: 'nssd-copyright-footer',
+  standalone: true,
+  styleUrls: ['./copyright-footer.component.scss'],
   templateUrl: './copyright-footer.component.html',
-  styleUrls: ['./copyright-footer.component.scss']
 })
 export class CopyrightFooterComponent implements OnInit {
   public copyrightText: string = '';
 
-  constructor() {}
+  constructor() { }
 
   ngOnInit(): void {
     const displayName: string = !!_packageDetails?.author?.name ? `, ${_packageDetails.author.name}` : '';

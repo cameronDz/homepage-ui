@@ -4,33 +4,34 @@ import { TextState } from '../../../../models/styles.enum';
 import { ApplicationOverviewText } from '../../../../models/application-overview.model';
 
 @Component({
-  selector: 'nssd-collapsible-icon',
-  templateUrl: './collapsible-icon.component.html',
-  styleUrls: ['./collapsible-icon.component.scss'],
   animations: [
     trigger('rotatedState', [
-      state(TextState.EXPANDED, style({ transform: 'rotate(90deg)' })),
+      state(TextState.EXPANDED, style({ transform: 'rotate(180deg)' })),
       state(TextState.COLLAPSED, style({ transform: 'rotate(0deg)' })),
       transition(`${TextState.COLLAPSED} => ${TextState.EXPANDED}`, animate('250ms ease-out')),
       transition(`${TextState.EXPANDED} => ${TextState.COLLAPSED}`, animate('250ms ease-in'))
     ])
-  ]
+  ],
+  selector: 'nssd-collapsible-icon',
+  standalone: true,
+  styleUrls: ['./collapsible-icon.component.scss'],
+  templateUrl: './collapsible-icon.component.html',
 })
 export class CollapsibleIconComponent implements OnChanges, OnInit {
 
   private readonly COLLAPSE_TEXT: string = ApplicationOverviewText.CLICK_TO_COLLAPSE_TEXT;
   private readonly EXPAND_TEXT: string = ApplicationOverviewText.CLICK_TO_EXPAND_TEXT;
 
-  public readonly IMAGE_SRC: string = 'https://storage-assets-homepage.s3.amazonaws.com/black-expand-triangle.png';
+  public readonly IMAGE_SRC: string = '/assets/images/icons/black-triangle.png';
 
   @Input() textState: TextState = TextState.EXPANDED;
   @Output() clickedToExpand: EventEmitter<TextState> = new EventEmitter<TextState>();
 
   public hoverText: string = this.COLLAPSE_TEXT;
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes) {

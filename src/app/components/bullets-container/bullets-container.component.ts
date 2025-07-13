@@ -1,8 +1,15 @@
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { BulletPointModel } from '../../models/bullet-point.model';
+import { BulletPointComponent } from './bullet-point/bullet-point.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
+  imports: [
+    BulletPointComponent,
+    CommonModule,
+  ],
   selector: 'nssd-bullets-container',
+  standalone: true,
   templateUrl: './bullets-container.component.html'
 })
 export class BulletsContainerComponent implements OnChanges, OnInit {
@@ -11,9 +18,9 @@ export class BulletsContainerComponent implements OnChanges, OnInit {
 
   public hasContent: boolean = false;
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   ngOnChanges(changes: SimpleChanges): void {
     this.setHasContent();

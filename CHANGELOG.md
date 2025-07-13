@@ -6,6 +6,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.0] 2025-07-13
+
+### Added
+
+- [deploy] setup build artifacts to deploy to github pages
+- [dev] eslint v9
+- [assets] images and icons
+- [assets] content data
+
+### Changed
+
+- [dependencies] updated angular to v19, TS to v5
+- [dependencies] move from npm to pnpm and update to use node v22
+- [components] updated all components to follow moduler pattern, only import components into components they are used
+- [services] removed api call and fetching data from /assets
+
+### Removed
+
+- [dev] tslint
+
+### Security
+
+- [dependencies] upgraded all deprecated dependencies and vulnerable packages
+
 ## [1.6.3] 2022-05-15
 
 ### Fixed

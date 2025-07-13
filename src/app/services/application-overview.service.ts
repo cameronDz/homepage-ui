@@ -1,23 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Subscription } from 'rxjs';
-
-import { HttpsRequestService } from './https-request.service';
-import { onCompleteCallback, onErrorCallback, onSuccessCallback } from "../models/types";
+import { Observable } from 'rxjs';
+import { DataResponse } from "../models/types";
 
 @Injectable({ providedIn: 'root' })
-export class ApplicationOverviewService extends HttpsRequestService {
-  private readonly ALL_DATA_SOURCE = "applicationData";
+export class ApplicationOverviewService {
 
-  constructor(httpClient: HttpClient) {
-    super(httpClient);
-  }
+  constructor(private httpClient: HttpClient) { }
 
-  public retrieveAllApplicationData(
-      self: any,
-      successCallback: onSuccessCallback,
-      errorCallback: onErrorCallback,
-      completedCallback: onCompleteCallback): Subscription {
-    return this.getData(self, this.ALL_DATA_SOURCE, successCallback, errorCallback, completedCallback)
+  public loadData(): Observable<DataResponse> {
+    return this.httpClient.get<DataResponse>('./assets/data.json');
   }
 }

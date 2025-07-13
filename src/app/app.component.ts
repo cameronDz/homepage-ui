@@ -1,15 +1,30 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Subscription } from 'rxjs';
 
 import { BulletPointModel } from './models/bullet-point.model';
 import { ApplicationOverviewService } from "./services/application-overview.service";
 import { SubscriptionUtility } from './utilities/subscription.utility';
 import { ApplicationOverviewModel } from './models/application-overview.model';
+import { LoadIndicatorComponent } from './components/load-indicator/load-indicator.component';
+import { AppFooterComponent } from './components/app-footer/app-footer.component';
+import { ApplicationOverviewContainerComponent } from './components/application-overview-container/application-overview-container.component';
+import { ToolbarHeaderComponent } from './components/toolbar-header/toolbar-header.component';
+import { BulletsContainerComponent } from './components/bullets-container/bullets-container.component';
 
 @Component({
+  imports: [
+    AppFooterComponent,
+    ApplicationOverviewContainerComponent,
+    BulletsContainerComponent,
+    CommonModule,
+    LoadIndicatorComponent,
+    ToolbarHeaderComponent
+  ],
   selector: 'nssd-root',
+  standalone: true,
+  styleUrls: ['./app.component.scss'],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnDestroy, OnInit {
   public errorHeader = 'Unable to fetch page data.';
@@ -25,7 +40,7 @@ export class AppComponent implements OnDestroy, OnInit {
 
   private applicationOverviewSubscription: Subscription = null;
 
-  constructor(private applicationOverviewService: ApplicationOverviewService) {}
+  constructor(private applicationOverviewService: ApplicationOverviewService) { }
 
   ngOnInit(): void {
     this.getApplicationOverviewData();
@@ -38,26 +53,47 @@ export class AppComponent implements OnDestroy, OnInit {
   private getApplicationOverviewData(): void {
     SubscriptionUtility.unsubscribe(this.applicationOverviewSubscription);
     this.isLoading = true;
-    this.applicationOverviewSubscription = this.applicationOverviewService.retrieveAllApplicationData(
-      this,
-      this.callbackApplicationOverviewSuccess,
-      this.callbackApplicationOverviewError,
-      this.callbackApplicationOverviewCompleted);
-  }
+    this.isError = false;
 
-  private callbackApplicationOverviewSuccess(self: AppComponent, data: any): void {
-    self.applications = data?.payload?.deployedApplications || [];
-    self.overviewBullets = data?.payload?.overviewBullets || [];
-    self.subtitle = data?.payload?.subtitle || '';
-    self.title = data?.payload?.title || '';
-  }
-
-  private callbackApplicationOverviewError(self: AppComponent, error: any): void {
-    self.isError = true;
-    self.errorMessage = error?.statusText || '';
-  }
-
-  private callbackApplicationOverviewCompleted(self: AppComponent): void {
-    self.isLoading = false;
+    this.applicationOverviewSubscription = this.applicationOverviewService.loadData()
+      .subscribe({
+        next: (data) => {
+          this.applications = (data?.deployedApplications || []).map(app =>
+            new ApplicationOverviewModel(
+              app.title,
+              app.overviewParagraphs,
+              app.technologyParagraphs,
+              app.deployedUrl,
+              app.bullets.map(bullet =>
+                new BulletPointModel(
+                  bullet.message,
+                  bullet.iconTitle,
+                  bullet.iconHref || '',
+                  bullet.iconHref,
+                  bullet.iconHrefTargetBlank
+                )
+              )
+            )
+          );
+          this.overviewBullets = (data?.overviewBullets || []).map(bullet =>
+            new BulletPointModel(
+              bullet.message,
+              bullet.iconTitle,
+              bullet.iconSrc,
+              bullet.iconHref,
+              bullet.iconHrefTargetBlank
+            )
+          );
+          this.subtitle = data?.subtitle || '';
+          this.title = data?.title || '';
+        },
+        error: (error) => {
+          this.isError = true;
+          this.errorMessage = error?.statusText || '';
+        },
+        complete: () => {
+          this.isLoading = false;
+        }
+      });
   }
 }

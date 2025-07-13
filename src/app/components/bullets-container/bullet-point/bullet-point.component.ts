@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 
 enum InputProperty {
   ICON_HREF_TARGET_BLANK = 'iconHrefTargetBlank'
@@ -6,8 +6,9 @@ enum InputProperty {
 
 @Component({
   selector: 'nssd-bullet-point',
+  standalone: true,
+  styleUrls: ['./bullet-point.component.scss'],
   templateUrl: './bullet-point.component.html',
-  styleUrls: ['./bullet-point.component.scss']
 })
 export class BulletPointComponent implements OnChanges, OnInit {
 
@@ -22,9 +23,9 @@ export class BulletPointComponent implements OnChanges, OnInit {
 
   public target: string = this.SELF_TARGET;
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes && changes[InputProperty.ICON_HREF_TARGET_BLANK]) {

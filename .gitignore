@@ -4,11 +4,17 @@
 /dist
 /tmp
 /out-tsc
+.angular/
 # Only exists if Bazel was run
 /bazel-out
 
 # dependencies
 /node_modules
+
+# lock files
+package-lock.json
+yarn.lock
+# keep pnpm-lock.yaml for reproducible builds
 
 # profiling files
 chrome-profiler-events*.json
