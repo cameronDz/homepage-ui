@@ -1,6 +1,10 @@
 # Homepage Application #
 Application is a Single Page Application written in Angular, generated using Angular CLI, with the purpose to be the landing page for a portfolio website, as well as portal into personal webpages.
 
+## Live
+
+https://camerondz.github.io/homepage-ui
+
 ## Prerequisites ##
 This project uses **pnpm** as the package manager. Make sure you have it installed:
 
