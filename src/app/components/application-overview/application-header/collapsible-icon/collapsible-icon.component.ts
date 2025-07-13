@@ -22,7 +22,7 @@ export class CollapsibleIconComponent implements OnChanges, OnInit {
   private readonly COLLAPSE_TEXT: string = ApplicationOverviewText.CLICK_TO_COLLAPSE_TEXT;
   private readonly EXPAND_TEXT: string = ApplicationOverviewText.CLICK_TO_EXPAND_TEXT;
 
-  public readonly IMAGE_SRC: string = '/assets/images/icons/black-triangle.png';
+  public readonly IMAGE_SRC: string = 'assets/images/icons/black-triangle.png';
 
   @Input() textState: TextState = TextState.EXPANDED;
   @Output() clickedToExpand: EventEmitter<TextState> = new EventEmitter<TextState>();

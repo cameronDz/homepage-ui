@@ -68,28 +68,28 @@
         {
             "iconHref": "https://github.com/cameronDz",
             "iconHrefTargetBlank": true,
-            "iconSrc": "/assets/images/icons/github.png",
+            "iconSrc": "assets/images/icons/github.png",
             "iconTitle": "Visit GitHub Homepage",
             "message": "Project repositories for personal application located on GitHub."
         },
         {
             "iconHref": "https://drive.google.com/file/d/1Pf26a83PUserZpvkLzDWjf4JIjeVvg2n/view?usp=sharing",
             "iconHrefTargetBlank": true,
-            "iconSrc": "/assets/images/icons/resume.png",
+            "iconSrc": "assets/images/icons/resume.png",
             "iconTitle": "Open Resume PDF",
             "message": "Resume with work experience, skill sets, and education, stored on Google Drive."
         },
         {
             "iconHref": "https://www.linkedin.com/in/cameron-dziurgot-955280108/",
             "iconHrefTargetBlank": true,
-            "iconSrc": "/assets/images/icons/linkedin.png",
+            "iconSrc": "assets/images/icons/linkedin.png",
             "iconTitle": "Visit LinkedIn Profile",
             "message": "LinkedIn social media profile."
         },
         {
             "iconHref": "https://camdziurgot.medium.com/",
             "iconHrefTargetBlank": true,
-            "iconSrc": "/assets/images/icons/medium.png",
+            "iconSrc": "assets/images/icons/medium.png",
             "iconTitle": "Visit Medium Homepage",
             "message": "Articles written on Medium publications on various technology and development topics."
         }
