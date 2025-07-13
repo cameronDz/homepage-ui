@@ -68,7 +68,7 @@ export class AppComponent implements OnDestroy, OnInit {
                 new BulletPointModel(
                   bullet.message,
                   bullet.iconTitle,
-                  bullet.iconHref || '',
+                  bullet.iconSrc,
                   bullet.iconHref,
                   bullet.iconHrefTargetBlank
                 )

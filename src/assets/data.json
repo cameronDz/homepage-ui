@@ -5,12 +5,14 @@
                 {
                     "iconHref": "https://github.com/cameronDz/augmented-ui",
                     "iconHrefTargetBlank": true,
+                    "iconSrc": "assets/images/icons/black-circle.png",
                     "iconTitle": "ReactJS",
                     "message": "View repository for frontend React UI project on GitHub."
                 },
                 {
                     "iconHref": "https://augmented.camdziurgot.io/",
                     "iconHrefTargetBlank": true,
+                    "iconSrc": "assets/images/icons/black-circle.png",
                     "iconTitle": "Augmented app",
                     "message": "Visit application."
                 }
@@ -30,24 +32,28 @@
                 {
                     "iconHref": "https://github.com/cameronDz/s3-access-api",
                     "iconHrefTargetBlank": true,
+                    "iconSrc": "assets/images/icons/black-circle.png",
                     "iconTitle": "Spring Boot",
                     "message": "View repository for backend/middleware Spring Boot project on GitHub."
                 },
                 {
                     "iconHref": "https://journal-notes-storage-api.herokuapp.com/swagger-ui.html#/s-3-index-controller",
                     "iconHrefTargetBlank": true,
+                    "iconSrc": "assets/images/icons/black-circle.png",
                     "iconTitle": "Heroku",
                     "message": "View deployed API application Swagger documentation on Heruko cloud."
                 },
                 {
                     "iconHref": "https://github.com/cameronDz/journal-notes-ui",
                     "iconHrefTargetBlank": true,
+                    "iconSrc": "assets/images/icons/black-circle.png",
                     "iconTitle": "ReactJS",
                     "message": "View repository for frontend React UI project on GitHub."
                 },
                 {
                     "iconHref": "https://notes.camdziurgot.io/",
                     "iconHrefTargetBlank": true,
+                    "iconSrc": "assets/images/icons/black-circle.png",
                     "iconTitle": "Notes app",
                     "message": "Visit application."
                 }
