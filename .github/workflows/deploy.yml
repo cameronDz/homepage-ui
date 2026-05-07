@@ -49,7 +49,7 @@ jobs:
     if: github.event_name == 'push'
     steps:
       - name: Download artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v4.1.3
         with:
           name: homepage-ui-dist
           path: ./dist
