@@ -3,7 +3,7 @@ Application is a Single Page Application written in Angular, generated using Ang
 
 ## Live
 
-https://camerondz.github.io/homepage-ui
+https://camdziurgot.github.io
 
 ## Prerequisites ##
 This project uses **pnpm** as the package manager. Make sure you have it installed:

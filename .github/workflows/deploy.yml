@@ -8,8 +8,6 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
   group: "pages"
@@ -37,23 +35,39 @@ jobs:
       run: pnpm install --frozen-lockfile
       
     - name: Build
-      run: pnpm run build:github-pages
-      
-    - name: Setup Pages
-      uses: actions/configure-pages@v4
+      run: pnpm run build:root-github-pages
       
     - name: Upload artifact
-      uses: actions/upload-pages-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
+        name: homepage-ui-dist
         path: ./dist/homepage-ui
 
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
+    if: github.event_name == 'push'
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: homepage-ui-dist
+          path: ./dist
+
+      - name: Checkout camdziurgot.github.io
+        uses: actions/checkout@v4
+        with:
+          repository: camdziurgot/camdziurgot.github.io
+          token: ${{ secrets.PAGES_DEPLOY_TOKEN }}
+          path: pages-repo
+
+      - name: Deploy to camdziurgot.github.io
+        run: |
+          cd pages-repo
+          git rm -rf --ignore-unmatch . --quiet || true
+          cp -r ../dist/. .
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "Deploy homepage-ui to camdziurgot.github.io"
+          git push

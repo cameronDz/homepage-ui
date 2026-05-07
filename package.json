@@ -59,6 +59,7 @@
     "build": "ng build",
     "build:prod": "ng build --configuration production",
     "build:github-pages": "ng build --configuration github-pages",
+    "build:root-github-pages": "ng build --configuration root-github-pages",
     "lint": "ng lint",
     "lint:fix": "ng lint --fix",
     "start": "ng serve",
