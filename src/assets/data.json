@@ -3,57 +3,30 @@
         {
             "bullets": [
                 {
-                    "iconHref": "https://github.com/cameronDz/augmented-ui",
-                    "iconHrefTargetBlank": true,
-                    "iconSrc": "assets/images/icons/black-triangle.png",
-                    "iconTitle": "ReactJS",
-                    "message": "View repository for frontend React UI project on GitHub."
-                },
-                {
-                    "iconHref": "https://augmented.camdziurgot.io/",
-                    "iconHrefTargetBlank": true,
-                    "iconSrc": "assets/images/icons/black-triangle.png",
-                    "iconTitle": "Augmented app",
-                    "message": "Visit application."
-                }
-            ],
-            "deployedUrl": "https://augmented.camdziurgot.io/",
-            "overviewParagraphs": [
-                "Augmented is a personal fitness application used to track fitness and nutrition. The end goal for augmented is to have user base (other than myself) use the application to record exercises routines, sleep schedules, meals, etc., connect wearable and smart devices to the application, and access other fitness and diet tracking applications, to have one place to collect all self tracking data. Currently, the application is only used to track cardio workouts."
-            ],
-            "technologyParagraphs": [
-                "The front end of the application is a Single Page Application using ReactJS, with a combination of Bulma and Material UI styling frameworks. Keeps code quality standards using ES Lint, compiled using Webpack, and tested using Mocha framework. The UI was originally deployed to an AWS S3 bucket, which statically hosts the applcation. Now it is hosted as a GitHub page. The application is hosted as a subdomin of camdziurgot.io, using Route53.",
-                "The back end of the applcation was originally written in .NET framework, using C#, but migrated to the Java Spring framework, to write the API to perform basic CRUD functions against files in an S3 bucket (this was originally a database hosted on Azure, generated using Entity Framework). The API is now hosted on Heroku."
-            ],
-            "title": "Augmented UI"
-        },
-        {
-            "bullets": [
-                {
                     "iconHref": "https://github.com/cameronDz/s3-access-api",
                     "iconHrefTargetBlank": true,
-                    "iconSrc": "assets/images/icons/black-triangle.png",
+                    "iconSrc": "assets/images/icons/github.png",
                     "iconTitle": "Spring Boot",
                     "message": "View repository for backend/middleware Spring Boot project on GitHub."
                 },
                 {
                     "iconHref": "https://journal-notes-storage-api.herokuapp.com/swagger-ui.html#/s-3-index-controller",
                     "iconHrefTargetBlank": true,
-                    "iconSrc": "assets/images/icons/black-triangle.png",
+                    "iconSrc": "assets/images/icons/heroku.svg",
                     "iconTitle": "Heroku",
-                    "message": "View deployed API application Swagger documentation on Heruko cloud."
+                    "message": "View deployed API application Swagger documentation on Heroku cloud."
                 },
                 {
                     "iconHref": "https://github.com/cameronDz/journal-notes-ui",
                     "iconHrefTargetBlank": true,
-                    "iconSrc": "assets/images/icons/black-triangle.png",
+                    "iconSrc": "assets/images/icons/github.png",
                     "iconTitle": "ReactJS",
                     "message": "View repository for frontend React UI project on GitHub."
                 },
                 {
                     "iconHref": "https://notes.camdziurgot.io/",
                     "iconHrefTargetBlank": true,
-                    "iconSrc": "assets/images/icons/black-triangle.png",
+                    "iconSrc": "assets/images/icons/external-link.svg",
                     "iconTitle": "Notes app",
                     "message": "Visit application."
                 }
