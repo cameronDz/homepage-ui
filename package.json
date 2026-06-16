@@ -14,7 +14,7 @@
     "@angular/common": "^19.2.21",
     "@angular/compiler": "^19.2.21",
     "@angular/compiler-cli": "^19.2.21",
-    "@angular/core": "^19.2.21",
+    "@angular/core": "^20.3.25",
     "@angular/forms": "^19.2.21",
     "@angular/language-service": "^19.2.21",
     "@angular/material": "^19.2.19",
